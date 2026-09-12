@@ -369,6 +369,13 @@ footer a{text-decoration:none;color:rgba(255,255,255,0.75);font-size:0.88rem;}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
 @media(max-width:800px){.two-col{grid-template-columns:1fr;}}
 
+
+.feature-photo{height:150px;margin:-24px -24px 18px;overflow:hidden;border-radius:var(--radius-md) var(--radius-md) 0 0;background:#ddd;}
+.feature-photo img,.section-photo img,.tl-photo{width:100%;height:100%;object-fit:cover;display:block;}
+.section-photo{height:320px;overflow:hidden;border-radius:24px;margin:0 0 30px;box-shadow:0 12px 30px -20px rgba(29,63,47,.45);}
+.tl-photo{height:180px;border-radius:16px;margin-bottom:16px;}
+@media(max-width:600px){.section-photo{height:220px}.tl-photo{height:150px}}
+
 /* skip link */
 .skip-link{position:absolute;left:-999px;top:auto;}
 .skip-link:focus{left:16px;top:16px;background:#fff;padding:10px 16px;border-radius:8px;z-index:9999;}
@@ -382,7 +389,7 @@ section{scroll-margin-top:78px;}
 .hero-art{min-width:0;}
 .hero-blob{background:
   linear-gradient(135deg,rgba(20,55,40,.18),rgba(20,55,40,.52)),
-  url("https://commons.wikimedia.org/wiki/Special:FilePath/SANTIAGO%20DE%20CALI%2C%20VALLE%20DEL%20CAUCA.jpg") center/cover no-repeat;}
+  url("img/cali.jpg") center/cover no-repeat;}
 .hero-blob svg{opacity:.28;mix-blend-mode:screen;}
 .hero-card{z-index:2;}
 .photo-art{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease;filter:saturate(1.05) contrast(1.02);}
@@ -630,10 +637,10 @@ section{scroll-margin-top:78px;}
     </div>
     <div class="grid grid-4">
       <div class="card-photo reveal">
-        <div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Show%20de%20Salsa.jpg" alt="Salsa" loading="lazy"></div><div class="body"><h3>Salsa</h3><p>Baile urbano de pareja, símbolo internacional de Cali, con giros rápidos y footwork característico.</p></div>
+        <div class="art"><img class="photo-art" src="img/salsa.jpg" alt="Salsa" loading="lazy"></div><div class="body"><h3>Salsa</h3><p>Baile urbano de pareja, símbolo internacional de Cali, con giros rápidos y footwork característico.</p></div>
       </div>
       <div class="card-photo reveal">
-        <div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Festival%20Petronio%20%C3%81lvarez%20%28Cali%29.jpg" alt="Currulao" loading="lazy"></div><div class="body"><h3>Currulao</h3><p>Danza afrodescendiente del Pacífico, acompañada por marimba de chonta, cununo y guasá.</p></div>
+        <div class="art"><img class="photo-art" src="img/currulao.jpg" alt="Currulao" loading="lazy"></div><div class="body"><h3>Currulao</h3><p>Danza afrodescendiente del Pacífico, acompañada por marimba de chonta, cununo y guasá.</p></div>
       </div>
       <div class="card-photo reveal">
         <div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/XV%20Petronio%20%C3%81lvarez.jpg" alt="Bunde" loading="lazy"></div><div class="body"><h3>Bunde</h3><p>Expresión musical y dancística del Pacífico, con un carácter comunitario y ceremonial.</p></div>
@@ -654,7 +661,7 @@ section{scroll-margin-top:78px;}
       <p>Los instrumentos del Pacífico y de la música andina le dan a la cultura valluna su sonido característico.</p>
     </div>
     <div class="grid grid-4">
-      <div class="card reveal"><div class="icon-wrap" style="background:var(--gold)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="10" width="18" height="6" rx="1"/><path d="M6 10V6m4 4V6m4 4V6m4 4V6"/></svg></div><h3>Marimba de chonta</h3><p>Instrumento emblemático de la música del Pacífico, elaborado con madera de chonta.</p></div>
+      <div class="card reveal"><div class="feature-photo"><img src="img/marimba.jpg" alt="Marimba de chonta" loading="lazy"></div><h3>Marimba de chonta</h3><p>Instrumento emblemático de la música del Pacífico, elaborado con madera de chonta.</p></div>
       <div class="card reveal"><div class="icon-wrap" style="background:var(--terracotta)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><ellipse cx="12" cy="12" rx="8" ry="6"/></svg></div><h3>Cununo</h3><p>Tambor cónico de origen afrodescendiente, base rítmica del currulao.</p></div>
       <div class="card reveal"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></div><h3>Bombo</h3><p>Tambor grande que marca el pulso central de la música del Pacífico.</p></div>
       <div class="card reveal"><div class="icon-wrap" style="background:var(--blue)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="5" y="5" width="14" height="14" rx="2"/></svg></div><h3>Guasá</h3><p>Instrumento de percusión hecho con semillas, típico de la música afropacífica.</p></div>
@@ -674,9 +681,9 @@ section{scroll-margin-top:78px;}
       <p>La gastronomía también cuenta la historia de un pueblo: cada plato refleja su geografía, su historia y sus comunidades.</p>
     </div>
     <div class="grid grid-4" id="gastro-grid">
-      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina.jpg" alt="Sancocho de gallina" loading="lazy"></div><div class="body"><h3>Sancocho de gallina</h3><p>Preparación insignia del departamento, especialmente reconocida en Ginebra.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="img/sancocho.jpg" alt="Sancocho de gallina" loading="lazy"></div><div class="body"><h3>Sancocho de gallina</h3><p>Preparación insignia del departamento, especialmente reconocida en Ginebra.</p></div></div>
       <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina%20criolla.jpg" alt="Arroz atollado" loading="lazy"></div><div class="body"><h3>Arroz atollado</h3><p>Plato tradicional a base de arroz, papa y carne de cerdo, típico del Valle.</p></div></div>
-      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cholado%20jamundi.jpg" alt="Aborrajado" loading="lazy"></div><div class="body"><h3>Aborrajado</h3><p>Preparación dulce y salada a base de plátano maduro y queso.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="img/cholado.jpg" alt="Aborrajado" loading="lazy"></div><div class="body"><h3>Aborrajado</h3><p>Preparación dulce y salada a base de plátano maduro y queso.</p></div></div>
       <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina.jpg" alt="Pandebono" loading="lazy"></div><div class="body"><h3>Pandebono</h3><p>Pan de queso característico de la panadería tradicional vallecaucana.</p></div></div>
       <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cholado%20jamundi.jpg" alt="Empanadas" loading="lazy"></div><div class="body"><h3>Empanadas</h3><p>Preparación popular presente en la cotidianidad culinaria del departamento.</p></div></div>
       <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Buenaventura%2C%20Colombia.jpg" alt="Fiambre" loading="lazy"></div><div class="body"><h3>Fiambre</h3><p>Comida tradicional para llevar, con arroz, carnes y plátano envueltos en hoja.</p></div></div>
@@ -722,6 +729,7 @@ section{scroll-margin-top:78px;}
       <h2>Flora y fauna</h2>
       <p>La diversidad de pisos térmicos, desde la costa Pacífica hasta las cordilleras, hace del Valle del Cauca un territorio de gran riqueza natural.</p>
     </div>
+    <div class="section-photo reveal"><img src="img/naturaleza.jpg" alt="Paisaje natural del Valle del Cauca y bosque tropical" loading="lazy"></div>
     <div class="two-col">
       <div>
         <h3 style="margin-bottom:16px;">Flora</h3>
@@ -755,6 +763,7 @@ section{scroll-margin-top:78px;}
     </div>
     <div class="timeline">
       <div class="tl-item reveal">
+        <img class="tl-photo" src="img/feria-cali.jpg" alt="Feria de Cali" loading="lazy">
         <h3>Feria de Cali</h3>
         <p>Una de las fiestas más importantes de la ciudad, estrechamente relacionada con la salsa, el baile y la cultura popular caleña.</p>
       </div>
@@ -798,13 +807,13 @@ section{scroll-margin-top:78px;}
       <p>Lugares emblemáticos que muestran la diversidad geográfica y cultural del Valle del Cauca.</p>
     </div>
     <div class="grid grid-4">
-      <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#2E5B45"/><path d="M90 130V60h6v-15h8v15h6v70Z" fill="#e8e8e8"/></svg></div><div class="body"><span class="tag">Cali</span><h3>Cristo Rey</h3><p>Monumento emblemático ubicado en un cerro con vista panorámica sobre Santiago de Cali.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="img/cristo-rey.jpg" alt="Cristo Rey de Cali" loading="lazy"></div><div class="body"><span class="tag">Cali</span><h3>Cristo Rey</h3><p>Monumento emblemático ubicado en un cerro con vista panorámica sobre Santiago de Cali.</p></div></div>
       <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#D99B2B"/><rect x="70" y="50" width="60" height="70" fill="#fff" opacity="0.9"/></svg></div><div class="body"><span class="tag">Buga</span><h3>Basílica del Señor de los Milagros</h3><p>Importante santuario religioso ubicado en el municipio de Guadalajara de Buga.</p></div></div>
       <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#B94A2C"/><rect x="60" y="70" width="80" height="50" fill="#f2d9b0"/></svg></div><div class="body"><span class="tag">El Cerrito</span><h3>Hacienda El Paraíso</h3><p>Casa histórica relacionada con la obra literaria "María" de Jorge Isaacs.</p></div></div>
       <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#1E5F86"/><ellipse cx="100" cy="90" rx="80" ry="25" fill="#4a90c2"/></svg></div><div class="body"><span class="tag">Calima</span><h3>Lago Calima</h3><p>Embalse rodeado de montañas, reconocido también por su valor arqueológico.</p></div></div>
       <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#F2C878"/><rect x="60" y="55" width="80" height="60" fill="#B94A2C"/></svg></div><div class="body"><span class="tag">Roldanillo</span><h3>Museo Rayo</h3><p>Espacio cultural dedicado al legado artístico de Omar Rayo.</p></div></div>
       <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#2E5B45"/><path d="M0 120 L60 40 L120 100 L160 60 L200 120Z" fill="#1D3F2F"/></svg></div><div class="body"><span class="tag">Cali</span><h3>Farallones de Cali</h3><p>Parque natural con gran biodiversidad, cercano a la ciudad de Cali.</p></div></div>
-      <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#1E5F86"/><path d="M0 100 Q50 80 100 100 T200 100V150H0Z" fill="#0d3652"/></svg></div><div class="body"><span class="tag">Buenaventura</span><h3>Bahía Málaga</h3><p>Reconocida por su biodiversidad marina y su importancia para las comunidades del Pacífico.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="img/buenaventura.jpg" alt="Buenaventura y el Pacífico" loading="lazy"></div><div class="body"><span class="tag">Buenaventura</span><h3>Bahía Málaga</h3><p>Reconocida por su biodiversidad marina y su importancia para las comunidades del Pacífico.</p></div></div>
     </div>
   </div>
 </section>
@@ -994,15 +1003,15 @@ revealEls.forEach(el=>io.observe(el));
 /* ================= DATA ================= */
 
 const personajes = [
-  {nombre:"Leonor González Mina", rol:'"La Negra Grande de Colombia" · Cantante y actriz', lugar:"Robles, Jamundí, Valle del Cauca", aporte:"Reconocida como una figura pionera para la representación afrocolombiana en la música y la actuación en Colombia, destacada representante del folclor nacional.", color:"var(--terracotta)"},
-  {nombre:"Petronio Álvarez", rol:"Músico y compositor", lugar:"Buenaventura, Valle del Cauca", aporte:"Su nombre da identidad al Festival de Música del Pacífico Petronio Álvarez, en reconocimiento a su aporte a la música de la región.", color:"var(--blue)"},
-  {nombre:"Jairo Varela", rol:"Músico, compositor y fundador del Grupo Niche", lugar:"Relacionado con Cali y la salsa colombiana", aporte:"Impulsó la salsa caleña a nivel nacional e internacional con el Grupo Niche.", color:"var(--gold)"},
-  {nombre:"Omar Rayo", rol:"Artista plástico", lugar:"Roldanillo, Valle del Cauca", aporte:"Su legado artístico dio origen al Museo Rayo, espacio cultural del municipio.", color:"var(--green)"},
-  {nombre:"Jorge Isaacs", rol:"Escritor", lugar:"Cali, Valle del Cauca", aporte:"Autor de la novela \"María\", una de las obras más importantes de la literatura colombiana del siglo XIX.", color:"var(--terracotta)"},
-  {nombre:'Benigno "Mono" Núñez', rol:"Músico y compositor", lugar:"Relacionado con Ginebra, Valle del Cauca", aporte:"Su nombre identifica al Festival Mono Núñez, referente de la música andina colombiana.", color:"var(--blue)"},
-  {nombre:"Enrique Buenaventura", rol:"Dramaturgo y director teatral", lugar:"Relacionado con Cali", aporte:"Figura clave del teatro colombiano contemporáneo desde el Valle del Cauca.", color:"var(--gold)"},
-  {nombre:"Carlos Mayolo", rol:"Director y guionista de cine", lugar:"Cali, Valle del Cauca", aporte:"Figura importante del movimiento cinematográfico conocido como Caliwood.", color:"var(--green)"},
-  {nombre:"Luis Ospina", rol:"Director y productor de cine", lugar:"Cali, Valle del Cauca", aporte:"Figura destacada de Caliwood, corriente cinematográfica surgida en Cali.", color:"var(--terracotta)"},
+  {nombre:"Leonor González Mina", rol:'"La Negra Grande de Colombia" · Cantante y actriz', lugar:"Robles, Jamundí, Valle del Cauca", aporte:"Reconocida como una figura pionera para la representación afrocolombiana en la música y la actuación en Colombia, destacada representante del folclor nacional.", img:"img/leonor-gonzalez-mina.jpg", color:"var(--terracotta)"},
+  {nombre:"Petronio Álvarez", rol:"Músico y compositor", lugar:"Buenaventura, Valle del Cauca", aporte:"Su nombre da identidad al Festival de Música del Pacífico Petronio Álvarez, en reconocimiento a su aporte a la música de la región.", img:"img/petronio-alvarez.jpg", color:"var(--blue)"},
+  {nombre:"Jairo Varela", rol:"Músico, compositor y fundador del Grupo Niche", lugar:"Relacionado con Cali y la salsa colombiana", aporte:"Impulsó la salsa caleña a nivel nacional e internacional con el Grupo Niche.", img:"img/jairo-varela.jpg", color:"var(--gold)"},
+  {nombre:"Omar Rayo", rol:"Artista plástico", lugar:"Roldanillo, Valle del Cauca", aporte:"Su legado artístico dio origen al Museo Rayo, espacio cultural del municipio.", img:"img/omar-rayo.jpg", color:"var(--green)"},
+  {nombre:"Jorge Isaacs", rol:"Escritor", lugar:"Cali, Valle del Cauca", aporte:"Autor de la novela \"María\", una de las obras más importantes de la literatura colombiana del siglo XIX.", img:"img/jorge-isaacs.jpg", color:"var(--terracotta)"},
+  {nombre:'Benigno "Mono" Núñez', rol:"Músico y compositor", lugar:"Relacionado con Ginebra, Valle del Cauca", aporte:"Su nombre identifica al Festival Mono Núñez, referente de la música andina colombiana.", img:"img/benigno-mono-nunez.jpg", color:"var(--blue)"},
+  {nombre:"Enrique Buenaventura", rol:"Dramaturgo y director teatral", lugar:"Relacionado con Cali", aporte:"Figura clave del teatro colombiano contemporáneo desde el Valle del Cauca.", img:"img/enrique-buenaventura.jpg", color:"var(--gold)"},
+  {nombre:"Carlos Mayolo", rol:"Director y guionista de cine", lugar:"Cali, Valle del Cauca", aporte:"Figura importante del movimiento cinematográfico conocido como Caliwood.", img:"img/carlos-mayolo.jpg", color:"var(--green)"},
+  {nombre:"Luis Ospina", rol:"Director y productor de cine", lugar:"Cali, Valle del Cauca", aporte:"Figura destacada de Caliwood, corriente cinematográfica surgida en Cali.", img:"img/luis-ospina.jpg", color:"var(--terracotta)"},
 ];
 
 const personajesGrid = document.getElementById('personajes-grid');
@@ -1010,8 +1019,8 @@ personajes.forEach((p,i)=>{
   const div = document.createElement('div');
   div.className = 'person-card reveal';
   div.innerHTML = `
-    <div class="person-photo" style="background:linear-gradient(150deg, ${p.color}, var(--green-deep));">
-      <svg viewBox="0 0 100 120"><circle cx="50" cy="42" r="22" fill="rgba(255,255,255,0.85)"/><path d="M15 118c0-24 15-38 35-38s35 14 35 38Z" fill="rgba(255,255,255,0.85)"/></svg>
+    <div class="person-photo">
+      <img src="${p.img}" alt="${p.nombre}" loading="lazy">
     </div>
     <div class="person-body">
       <h3>${p.nombre}</h3>
@@ -1026,8 +1035,8 @@ personajesGrid.addEventListener('click', (e)=>{
   if(e.target.classList.contains('more-btn')){
     const p = personajes[e.target.dataset.i];
     document.getElementById('modal-body').innerHTML = `
-      <div class="person-photo" style="border-radius:16px;margin-bottom:18px;background:linear-gradient(150deg, ${p.color}, var(--green-deep));">
-        <svg viewBox="0 0 100 120"><circle cx="50" cy="42" r="22" fill="rgba(255,255,255,0.85)"/><path d="M15 118c0-24 15-38 35-38s35 14 35 38Z" fill="rgba(255,255,255,0.85)"/></svg>
+      <div class="person-photo" style="border-radius:16px;margin-bottom:18px;">
+        <img src="${p.img}" alt="${p.nombre}">
       </div>
       <h3 style="margin-bottom:4px;">${p.nombre}</h3>
       <div class="person-role" style="margin-bottom:14px;">${p.rol}</div>
@@ -1102,18 +1111,25 @@ elementos.forEach(([t,d])=>{
 /* ---------------- Galería ---------------- */
 const categorias = ["Todas","Cali","Salsa","Gastronomía","Pacífico","Afrocolombianidad","Música","Bailes","Naturaleza","Personajes","Turismo","Fiestas"];
 const galeriaItems = [
-  {cat:"Cali", titulo:"Vida cultural de Cali", desc:"Panorámica de Santiago de Cali y su paisaje urbano.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/SANTIAGO%20DE%20CALI%2C%20VALLE%20DEL%20CAUCA.jpg"},
-  {cat:"Salsa", titulo:"Ritmo de la salsa", desc:"La salsa es una de las expresiones culturales más reconocidas de Cali.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Show%20de%20Salsa.jpg"},
-  {cat:"Gastronomía", titulo:"Sancocho de gallina", desc:"Plato tradicional presente en la gastronomía colombiana y vallecaucana.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina.jpg"},
-  {cat:"Pacífico", titulo:"Buenaventura y el Pacífico", desc:"Paisaje de Buenaventura, territorio clave del Pacífico vallecaucano.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Buenaventura%2C%20Colombia.jpg"},
-  {cat:"Afrocolombianidad", titulo:"Festival Petronio Álvarez", desc:"Encuentro cultural que visibiliza expresiones del Pacífico colombiano.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Festival%20Petronio%20%C3%81lvarez%20%28Cali%29.jpg"},
-  {cat:"Música", titulo:"Marimba y tradición del Pacífico", desc:"La marimba de chonta y los cantos son parte esencial de la tradición musical afropacífica.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/In%C3%A9s%20Granja.jpg"},
-  {cat:"Bailes", titulo:"Salsa caleña", desc:"Expresión dancística característica de Santiago de Cali.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Salsa%20cale%C3%B1a.jpg"},
-  {cat:"Naturaleza", titulo:"Litoral Pacífico", desc:"Paisajes naturales asociados con Buenaventura y la costa del Pacífico.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Fotograf%C3%ADa%20Buenaventura.jpg"},
-  {cat:"Turismo", titulo:"Cristo Rey y Cali", desc:"Vista de la ciudad de Cali desde el sector de Cristo Rey.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/MUNICIPIO%20DE%20SANTIAGO%20DE%20CALI%2C%20VALLE%20DEL%20CAUCA.jpg"},
-  {cat:"Fiestas", titulo:"Feria de Cali", desc:"Celebración cultural de gran importancia para la ciudad.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Feria%20de%20Cali%2025.jpg"},
-  {cat:"Gastronomía", titulo:"Cholado de Jamundí", desc:"Postre helado de frutas asociado especialmente con Jamundí.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Cholado%20jamundi.jpg"},
-  {cat:"Cali", titulo:"Panorámica de Cali", desc:"Vista panorámica de Santiago de Cali, capital del Valle del Cauca.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Panor%C3%A1mica%20-%20Cali%20-%20Valle%20del%20Cauca%20-%20Colombia.jpg"}
+  {cat:"Cali", titulo:"Santiago de Cali", desc:"Panorama urbano de Santiago de Cali.", img:"img/cali.jpg"},
+  {cat:"Salsa", titulo:"Salsa caleña", desc:"Bailarines de salsa caleña en presentación.", img:"img/salsa.jpg"},
+  {cat:"Gastronomía", titulo:"Sancocho de gallina", desc:"Sancocho de gallina tradicional.", img:"img/sancocho.jpg"},
+  {cat:"Gastronomía", titulo:"Cholado de Jamundí", desc:"Cholado tradicional de Jamundí con frutas y hielo raspado.", img:"img/cholado.jpg"},
+  {cat:"Pacífico", titulo:"Buenaventura", desc:"Paisaje marítimo y puerto del Pacífico en Buenaventura.", img:"img/buenaventura.jpg"},
+  {cat:"Música", titulo:"Marimba de chonta", desc:"Instrumento autóctono del Pacífico colombiano.", img:"img/marimba.jpg"},
+  {cat:"Bailes", titulo:"Currulao", desc:"Danza folclórica tradicional del Pacífico colombiano.", img:"img/currulao.jpg"},
+  {cat:"Naturaleza", titulo:"Naturaleza del Valle", desc:"Paisaje natural del Valle del Cauca y bosque tropical.", img:"img/naturaleza.jpg"},
+  {cat:"Turismo", titulo:"Cristo Rey de Cali", desc:"Monumento a Cristo Rey en Santiago de Cali.", img:"img/cristo-rey.jpg"},
+  {cat:"Fiestas", titulo:"Feria de Cali", desc:"Desfiles, salsa y fiesta caleña tradicional.", img:"img/feria-cali.jpg"},
+  {cat:"Personajes", titulo:"Leonor González Mina", desc:"La Negra Grande de Colombia, cantante afrocolombiana de folclor pacífico y bambucos.", img:"img/leonor-gonzalez-mina.jpg"},
+  {cat:"Personajes", titulo:"Petronio Álvarez", desc:"Músico y compositor, figura insigne de la música del Pacífico.", img:"img/petronio-alvarez.jpg"},
+  {cat:"Personajes", titulo:"Jairo Varela", desc:"Fundador del Grupo Niche y figura fundamental de la salsa caleña.", img:"img/jairo-varela.jpg"},
+  {cat:"Personajes", titulo:"Omar Rayo", desc:"Pintor, grabador y escultor geométrico nacido en Roldanillo.", img:"img/omar-rayo.jpg"},
+  {cat:"Personajes", titulo:"Jorge Isaacs", desc:"Novelista y poeta vallecaucano, autor de María.", img:"img/jorge-isaacs.jpg"},
+  {cat:"Personajes", titulo:"Benigno 'Mono' Núñez", desc:"Intérprete de bandola e inspirador del Festival de Música Andina.", img:"img/benigno-mono-nunez.jpg"},
+  {cat:"Personajes", titulo:"Enrique Buenaventura", desc:"Dramaturgo y poeta, fundador del Teatro Experimental de Cali.", img:"img/enrique-buenaventura.jpg"},
+  {cat:"Personajes", titulo:"Carlos Mayolo", desc:"Cineasta y actor, cofundador del movimiento Caliwood.", img:"img/carlos-mayolo.jpg"},
+  {cat:"Personajes", titulo:"Luis Ospina", desc:"Director y documentalista, figura clave del grupo de cine de Cali.", img:"img/luis-ospina.jpg"}
 ];
 
 const filtersEl = document.getElementById('gallery-filters');
@@ -1130,7 +1146,7 @@ function renderGallery(filter){
   galeriaItems.filter(it=>filter==='Todas'||it.cat===filter).forEach((it,idx)=>{
     const fig = document.createElement('figure');
     fig.className='masonry-item';
-    fig.innerHTML = `<img class="art gallery-img" src="${it.img}" alt="${it.titulo}" loading="lazy"><figcaption>${it.titulo}<div class="gallery-credit">Wikimedia Commons · fotografía</div></figcaption>`;
+    fig.innerHTML = `<img class="art gallery-img" src="${it.img}" alt="${it.titulo}" loading="lazy"><figcaption>${it.titulo}<div class="gallery-credit">Imagen de la guía suministrada</div></figcaption>`;
     fig.addEventListener('click', ()=>openLightbox(it));
     galGrid.appendChild(fig);
   });
