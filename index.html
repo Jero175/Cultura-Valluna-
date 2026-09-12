@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultura Valluna — Proyecto de Afrocolombianidad 11-D</title>
+<meta name="description" content="Un recorrido educativo por la música, danza, gastronomía, personajes y tradiciones del Valle del Cauca, con énfasis en el aporte afrocolombiano.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#D99B2B;
+  --gold-soft:#F2C878;
+  --green:#2E5B45;
+  --green-deep:#1D3F2F;
+  --blue:#1E5F86;
+  --terracotta:#B94A2C;
+  --cream:#FBF3E2;
+  --paper:#FFFBF3;
+  --ink:#23261F;
+  --ink-soft:#54503f;
+  --line: rgba(35,38,31,0.12);
+  --radius-lg: 32px;
+  --radius-md: 18px;
+  --radius-sm: 10px;
+  --shadow: 0 18px 40px -22px rgba(29,63,47,0.35);
+  --maxw: 1180px;
+  --serif: 'Fraunces', serif;
+  --sans: 'Work Sans', sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{
+  font-family:var(--serif);
+  margin:0 0 0.4em 0;
+  color:var(--green-deep);
+  font-weight:600;
+  letter-spacing:-0.01em;
+}
+p{margin:0 0 1em 0; color:var(--ink-soft); max-width:68ch;}
+a{color:inherit;}
+img{max-width:100%;display:block;}
+button{font-family:inherit;cursor:pointer;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.section{padding:96px 0;position:relative;}
+.section-tight{padding:64px 0;}
+.section-head{max-width:640px;margin-bottom:48px;}
+.section-head .kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:0.95rem;color:var(--terracotta);font-weight:600;margin-bottom:10px;
+}
+.section-head .kicker svg{width:18px;height:18px;}
+.section-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);}
+.section-head p{font-size:1.05rem;}
+.divider-shape{width:64px;height:6px;border-radius:6px;background:var(--gold);margin:16px 0 0;}
+
+/* ---------- Progress bar ---------- */
+#progress-bar{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--terracotta));width:0%;z-index:9999;transition:width .1s linear;}
+
+/* ---------- Nav ---------- */
+header#site-nav{
+  position:sticky;top:0;z-index:900;
+  background:rgba(251,243,226,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:1.15rem;color:var(--green-deep);white-space:nowrap;}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:conic-gradient(var(--gold),var(--terracotta),var(--blue),var(--green));}
+nav#main-menu{display:flex;flex-wrap:wrap;gap:2px;}
+nav#main-menu a{
+  font-size:0.82rem;font-weight:600;letter-spacing:0.02em;
+  padding:8px 12px;border-radius:100px;color:var(--ink);text-decoration:none;
+  white-space:nowrap;transition:background .2s, color .2s;
+}
+nav#main-menu a:hover, nav#main-menu a:focus-visible{background:var(--green);color:#fff;}
+#menu-toggle{display:none;background:none;border:none;padding:8px;}
+#menu-toggle span, #menu-toggle span::before, #menu-toggle span::after{
+  content:'';display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:.25s;
+}
+#menu-toggle span::before{position:absolute;top:-7px;}
+#menu-toggle span::after{position:absolute;top:7px;}
+
+@media (max-width: 980px){
+  nav#main-menu{
+    position:fixed;top:64px;right:0;left:0;bottom:0;
+    background:var(--paper);
+    flex-direction:column;padding:16px;gap:4px;
+    transform:translateX(100%);transition:transform .3s ease;
+    overflow-y:auto;
+  }
+  nav#main-menu.open{transform:translateX(0);}
+  nav#main-menu a{padding:14px 16px;border-radius:12px;font-size:0.95rem;}
+  #menu-toggle{display:block;}
+}
+
+/* ---------- Hero ---------- */
+#hero{
+  position:relative;overflow:hidden;
+  padding:80px 0 100px;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(217,155,43,0.35), transparent 55%),
+    radial-gradient(circle at 10% 90%, rgba(30,95,134,0.28), transparent 50%),
+    linear-gradient(160deg,#F7ECD3 0%, #F1E2BE 55%, #E7D5A6 100%);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;color:var(--green);font-weight:700;font-size:0.85rem;margin-bottom:18px;}
+.hero-eyebrow .line{width:34px;height:2px;background:var(--terracotta);}
+#hero h1{
+  font-size:clamp(2.35rem,7vw,4.6rem);line-height:0.98;
+  color:var(--green-deep);
+  font-weight:900;
+}
+#hero .subtitle{font-family:var(--serif);font-size:clamp(1.1rem,2.2vw,1.5rem);color:var(--terracotta);font-weight:600;margin-top:10px;}
+#hero .lead{font-size:1.08rem;margin-top:20px;max-width:52ch;}
+.hero-meta{margin-top:28px;border-left:3px solid var(--gold);padding-left:16px;font-size:0.95rem;color:var(--ink-soft);}
+.hero-meta strong{display:block;color:var(--green-deep);font-weight:700;}
+.hero-cta{
+  margin-top:32px;display:inline-flex;align-items:center;gap:10px;
+  background:var(--green-deep);color:#fff;border:none;
+  padding:15px 26px;border-radius:100px;font-weight:600;font-size:0.98rem;
+  box-shadow:var(--shadow);transition:transform .2s, background .2s;
+}
+.hero-cta:hover{background:var(--terracotta);transform:translateY(-2px);}
+.hero-art{position:relative;aspect-ratio:1/1.05;}
+.hero-blob{position:absolute;inset:0;border-radius:44% 56% 62% 38% / 45% 40% 60% 55%;
+  background:linear-gradient(150deg,var(--green) 0%, var(--green-deep) 55%, #14261d 100%);
+  box-shadow:var(--shadow);
+  animation:blobshift 14s ease-in-out infinite alternate;
+  overflow:hidden;
+}
+@keyframes blobshift{
+  0%{border-radius:44% 56% 62% 38% / 45% 40% 60% 55%;}
+  100%{border-radius:60% 40% 38% 62% / 55% 62% 38% 45%;}
+}
+.hero-art svg{position:absolute;inset:0;width:100%;height:100%;}
+.hero-card{
+  position:absolute;bottom:-18px;left:-24px;
+  background:var(--paper);border-radius:var(--radius-md);
+  padding:16px 20px;box-shadow:var(--shadow);
+  font-size:0.85rem;font-weight:600;color:var(--green-deep);
+  display:flex;align-items:center;gap:10px;
+}
+.hero-card svg{width:26px;height:26px;flex:none;}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* ---------- Cards ---------- */
+.grid{display:grid;gap:22px;}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+@media(max-width:900px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+.card{
+  background:var(--paper);border-radius:var(--radius-md);
+  padding:26px;border:1px solid var(--line);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s;
+}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent;}
+.card .icon-wrap{
+  width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:14px;background:var(--green);color:#fff;
+}
+.card .icon-wrap svg{width:24px;height:24px;}
+.card h3{font-size:1.15rem;margin-bottom:8px;}
+.card p{font-size:0.95rem;margin-bottom:0;}
+
+.card-photo{border-radius:var(--radius-md);overflow:hidden;background:var(--paper);border:1px solid var(--line);transition:transform .25s, box-shadow .25s;}
+.card-photo:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
+.card-photo .art{aspect-ratio:4/3;position:relative;overflow:hidden;}
+.card-photo .art svg{width:100%;height:100%;}
+.card-photo .body{padding:18px 20px 22px;}
+.card-photo h3{font-size:1.05rem;margin-bottom:6px;}
+.card-photo p{font-size:0.9rem;margin-bottom:0;}
+.tag{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.03em;color:var(--terracotta);background:rgba(185,74,44,0.1);padding:4px 10px;border-radius:100px;margin-bottom:10px;}
+
+/* ---------- Alt section backgrounds ---------- */
+.bg-green{background:var(--green-deep);color:#fff;}
+.bg-green h2,.bg-green h3,.bg-green h4{color:#fff;}
+.bg-green p{color:rgba(255,255,255,0.78);}
+.bg-green .card{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);}
+.bg-green .card p{color:rgba(255,255,255,0.75);}
+.bg-green .divider-shape{background:var(--gold);}
+
+.bg-band{background:linear-gradient(180deg,var(--paper),var(--cream));}
+
+/* ---------- Ubicacion map card ---------- */
+.map-card{
+  background:var(--paper);border-radius:var(--radius-lg);border:1px solid var(--line);
+  padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;box-shadow:var(--shadow);
+}
+@media(max-width:800px){.map-card{grid-template-columns:1fr;}}
+.map-facts{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+.map-facts li{display:flex;gap:12px;font-size:0.95rem;align-items:flex-start;}
+.map-facts svg{width:20px;height:20px;flex:none;margin-top:2px;color:var(--terracotta);}
+.formula-card{
+  background:var(--green-deep);color:#fff;border-radius:var(--radius-md);
+  padding:22px 26px;font-family:var(--serif);font-size:1.15rem;text-align:center;font-weight:600;
+  margin-top:20px;
+}
+
+/* ---------- Afro highlight ---------- */
+.reflect-box{
+  border-left:4px solid var(--gold);
+  background:rgba(217,155,43,0.09);
+  padding:22px 26px;border-radius:0 var(--radius-md) var(--radius-md) 0;
+  font-family:var(--serif);font-size:1.15rem;color:var(--green-deep);font-weight:600;margin-top:30px;
+}
+
+/* ---------- Accordion ---------- */
+.accordion-item{border-bottom:1px solid var(--line);}
+.accordion-item button.acc-trigger{
+  width:100%;text-align:left;background:none;border:none;padding:20px 4px;
+  display:flex;justify-content:space-between;align-items:center;font-family:var(--serif);
+  font-size:1.05rem;font-weight:600;color:var(--green-deep);
+}
+.acc-trigger .plus{transition:transform .25s;font-size:1.4rem;color:var(--terracotta);}
+.accordion-item.open .plus{transform:rotate(45deg);}
+.acc-panel{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.acc-panel-inner{padding:0 4px 20px;}
+
+/* ---------- Timeline (fiestas) ---------- */
+.timeline{position:relative;padding-left:30px;}
+.timeline::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding-bottom:40px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{content:'';position:absolute;left:-30px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid var(--cream);}
+.tl-item h3{font-size:1.15rem;margin-bottom:6px;}
+
+/* ---------- Personajes ---------- */
+.person-card{
+  background:var(--paper);border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--line);
+  transition:transform .25s, box-shadow .25s;cursor:pointer;
+}
+.person-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
+.person-photo{aspect-ratio:3/3.4;background:linear-gradient(150deg,var(--blue),var(--green-deep));position:relative;}
+.person-photo svg{width:100%;height:100%;}
+.person-body{padding:18px 20px 22px;}
+.person-body h3{font-size:1.05rem;margin-bottom:2px;}
+.person-role{font-size:0.82rem;color:var(--terracotta);font-weight:600;margin-bottom:10px;}
+.person-body p{font-size:0.88rem;margin-bottom:12px;}
+.more-btn{background:none;border:1px solid var(--green);color:var(--green-deep);font-weight:600;font-size:0.82rem;padding:8px 14px;border-radius:100px;}
+.more-btn:hover{background:var(--green);color:#fff;}
+
+/* ---------- Modal ---------- */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(20,25,20,0.6);display:none;align-items:center;justify-content:center;
+  z-index:2000;padding:24px;
+}
+.modal-overlay.active{display:flex;}
+.modal-box{
+  background:var(--paper);border-radius:var(--radius-lg);max-width:520px;width:100%;
+  padding:32px;position:relative;max-height:85vh;overflow-y:auto;
+}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:1.4rem;color:var(--ink-soft);}
+
+/* ---------- Datos curiosos flip ---------- */
+.flip-card{perspective:1200px;height:170px;}
+.flip-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d;}
+.flip-card.flipped .flip-inner{transform:rotateY(180deg);}
+.flip-front,.flip-back{
+  position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius-md);
+  padding:22px;display:flex;align-items:center;justify-content:center;text-align:center;
+}
+.flip-front{background:var(--green-deep);color:#fff;font-family:var(--serif);font-weight:600;font-size:1.1rem;cursor:pointer;}
+.flip-back{background:var(--gold-soft);color:var(--green-deep);transform:rotateY(180deg);font-size:0.92rem;font-weight:500;}
+
+/* ---------- Elementos (10) ---------- */
+.elemento{text-align:center;padding:24px 14px;}
+.elemento .icon-wrap{margin:0 auto 14px;}
+
+/* ---------- Gallery ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
+.filter-btn{
+  background:var(--paper);border:1px solid var(--line);padding:8px 16px;border-radius:100px;
+  font-size:0.85rem;font-weight:600;color:var(--ink-soft);
+}
+.filter-btn.active{background:var(--green-deep);color:#fff;border-color:var(--green-deep);}
+.masonry{columns:3 220px;column-gap:18px;}
+@media(max-width:700px){.masonry{columns:2 150px;}}
+.masonry-item{break-inside:avoid;margin-bottom:18px;border-radius:var(--radius-md);overflow:hidden;cursor:pointer;position:relative;box-shadow:0 6px 18px -10px rgba(0,0,0,0.3);}
+.masonry-item .art{width:100%;display:block;}
+.masonry-item figcaption{
+  position:absolute;bottom:0;left:0;right:0;padding:12px 14px;
+  background:linear-gradient(0deg,rgba(0,0,0,0.65),transparent);color:#fff;font-size:0.8rem;font-weight:600;margin:0;
+}
+.masonry-item{margin:0;}
+#lightbox{position:fixed;inset:0;background:rgba(10,15,10,0.9);display:none;align-items:center;justify-content:center;z-index:2100;padding:20px;}
+#lightbox.active{display:flex;}
+#lightbox .lb-content{max-width:640px;width:100%;background:var(--paper);border-radius:var(--radius-md);overflow:hidden;}
+#lightbox .lb-art{aspect-ratio:4/3;}
+#lightbox .lb-caption{padding:18px 22px;}
+#lightbox-close{position:absolute;top:24px;right:28px;color:#fff;background:none;border:none;font-size:1.8rem;}
+
+/* ---------- Glosario ---------- */
+.glossary-list{display:grid;gap:0;border-top:1px solid var(--line);}
+.g-term{border-bottom:1px solid var(--line);padding:18px 4px;cursor:pointer;}
+.g-term-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--green-deep);}
+.g-def{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:0.92rem;}
+.g-def-inner{padding-top:10px;}
+.g-term.open .g-def{max-height:200px;}
+.g-term.open .g-arrow{transform:rotate(90deg);}
+.g-arrow{transition:transform .25s;color:var(--terracotta);}
+
+/* ---------- Reflexion ---------- */
+#reflexion{background:linear-gradient(150deg,var(--green-deep),#14261d);color:#fff;text-align:center;}
+#reflexion .wrap{max-width:800px;}
+#reflexion p{color:rgba(255,255,255,0.82);font-size:1.05rem;margin:0 auto 18px;}
+#reflexion .final-phrase{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-top:28px;color:var(--gold-soft);}
+
+/* ---------- Sobre nosotros ---------- */
+.about-badge{
+  display:inline-flex;gap:10px;flex-wrap:wrap;
+}
+.about-badge span{
+  background:var(--paper);border:1px solid var(--line);border-radius:100px;padding:8px 16px;font-size:0.82rem;font-weight:700;color:var(--green-deep);
+}
+.student-slot{
+  border:1.5px dashed var(--line);border-radius:var(--radius-md);padding:24px;text-align:center;color:var(--ink-soft);font-size:0.9rem;margin-top:24px;
+}
+
+/* ---------- Fuentes ---------- */
+.sources-list{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+.sources-list li{display:flex;gap:12px;font-size:0.92rem;padding:14px 16px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);}
+.sources-list svg{width:18px;height:18px;flex:none;margin-top:3px;color:var(--blue);}
+
+/* ---------- Footer ---------- */
+footer{background:var(--green-deep);color:rgba(255,255,255,0.85);padding:56px 0 28px;}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px;margin-bottom:36px;}
+@media(max-width:800px){.footer-grid{grid-template-columns:1fr;}}
+footer h4{color:#fff;font-size:1rem;margin-bottom:14px;}
+footer a{text-decoration:none;color:rgba(255,255,255,0.75);font-size:0.88rem;}
+.footer-links{display:flex;flex-direction:column;gap:8px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.15);padding-top:22px;font-size:0.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:rgba(255,255,255,0.6);}
+.footer-brand{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:10px;}
+
+/* ---------- Back to top ---------- */
+#back-to-top{
+  position:fixed;bottom:26px;right:26px;width:48px;height:48px;border-radius:50%;
+  background:var(--green-deep);color:#fff;border:none;display:none;align-items:center;justify-content:center;
+  box-shadow:var(--shadow);z-index:800;
+}
+#back-to-top.show{display:flex;}
+#back-to-top svg{width:20px;height:20px;}
+
+.disclaimer-box{
+  background:rgba(30,95,134,0.08);border:1px solid rgba(30,95,134,0.25);border-radius:var(--radius-md);
+  padding:20px 24px;font-size:0.92rem;color:var(--ink-soft);margin-top:20px;
+}
+.disclaimer-box strong{color:var(--blue);}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+@media(max-width:800px){.two-col{grid-template-columns:1fr;}}
+
+/* skip link */
+.skip-link{position:absolute;left:-999px;top:auto;}
+.skip-link:focus{left:16px;top:16px;background:#fff;padding:10px 16px;border-radius:8px;z-index:9999;}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;}
+
+/* ===== Mejoras visuales: fotografías + mapa interactivo + responsive ===== */
+body{overflow-x:hidden;}
+section{scroll-margin-top:78px;}
+.nav-inner{min-height:64px;}
+.brand{flex-shrink:0;}
+.hero-art{min-width:0;}
+.hero-blob{background:
+  linear-gradient(135deg,rgba(20,55,40,.18),rgba(20,55,40,.52)),
+  url("https://commons.wikimedia.org/wiki/Special:FilePath/SANTIAGO%20DE%20CALI%2C%20VALLE%20DEL%20CAUCA.jpg") center/cover no-repeat;}
+.hero-blob svg{opacity:.28;mix-blend-mode:screen;}
+.hero-card{z-index:2;}
+.photo-art{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease;filter:saturate(1.05) contrast(1.02);}
+.card-photo:hover .photo-art,.masonry-item:hover img{transform:scale(1.045);}
+.card-photo .art{background:#d9c9a7;}
+.card-photo .art img{width:100%;height:100%;object-fit:cover;}
+.person-photo{overflow:hidden;}
+.person-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.map-embed{position:relative;min-height:390px;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 12px 30px -20px rgba(29,63,47,.45);background:#e8dfc9;}
+.map-embed iframe{width:100%;height:390px;border:0;display:block;}
+.map-overlay{position:absolute;left:14px;bottom:14px;background:rgba(255,251,243,.94);padding:10px 13px;border-radius:12px;box-shadow:0 8px 22px -15px #000;font-size:.82rem;font-weight:700;color:var(--green-deep);backdrop-filter:blur(8px);}
+.map-overlay a{color:var(--terracotta);text-decoration:none;}
+.gallery-img{width:100%;height:auto;display:block;object-fit:cover;}
+#lightbox .lb-art{background:#111;}
+#lightbox .lb-art img{width:100%;height:100%;object-fit:contain;display:block;}
+.gallery-credit{font-size:.72rem;color:rgba(255,255,255,.8);margin-top:5px;}
+.photo-credit{font-size:.72rem;color:var(--ink-soft);margin-top:8px;}
+.photo-credit a{color:var(--terracotta);text-decoration:none;}
+@media(max-width:980px){
+  header#site-nav{position:sticky;}
+  .nav-inner{padding:10px 18px;}
+  nav#main-menu{top:64px;}
+  .hero-art{max-width:620px;margin:0 auto;width:100%;}
+}
+@media(max-width:600px){
+  .wrap{padding:0 16px;}
+  .section{padding:68px 0;}
+  .section-tight{padding:44px 0;}
+  .hero-art{aspect-ratio:1/1.02;}
+  .hero-card{left:8px;bottom:-12px;font-size:.76rem;padding:12px 14px;}
+  .map-card{padding:18px;gap:20px;border-radius:22px;}
+  .map-embed,.map-embed iframe{min-height:310px;height:310px;}
+  .formula-card{font-size:1rem;padding:18px;}
+  .filters{overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px;scrollbar-width:thin;}
+  .filter-btn{flex:0 0 auto;}
+  .masonry{columns:1;}
+  .masonry-item{margin-bottom:14px;}
+  .masonry-item figcaption{font-size:.85rem;padding:14px;}
+  .modal-box{padding:22px;max-height:88vh;}
+}
+@media(min-width:981px){
+  .hero-art{min-height:520px;}
+}
+
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#inicio">Saltar al contenido principal</a>
+<div id="progress-bar"></div>
+
+<header id="site-nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="dot"></span> Cultura Valluna</div>
+    <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+    <nav id="main-menu" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#historia">Historia</a>
+      <a href="#afrocolombianidad">Afrocolombianidad</a>
+      <a href="#musica">Música</a>
+      <a href="#bailes">Bailes</a>
+      <a href="#gastronomia">Gastronomía</a>
+      <a href="#vestuario">Vestuario</a>
+      <a href="#flora-fauna">Flora y fauna</a>
+      <a href="#fiestas">Fiestas</a>
+      <a href="#personajes">Personajes</a>
+      <a href="#turismo">Turismo</a>
+      <a href="#curiosos">Datos curiosos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#glosario">Glosario</a>
+      <a href="#nosotros">11-D</a>
+      <a href="#fuentes">Fuentes</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="inicio">
+  <div id="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="hero-eyebrow"><span class="line"></span> Proyecto de Afrocolombianidad — Grado 11-D</div>
+        <h1>Cultura<br>Valluna</h1>
+        <p class="subtitle">Tradición, identidad y diversidad del Valle del Cauca</p>
+        <p class="lead">Un recorrido por los sonidos, sabores, tradiciones, personajes y paisajes que hacen única a la cultura valluna.</p>
+        <div class="hero-meta">
+          <strong>Institución Educativa Fabio Riveros</strong>
+          Villanueva, Casanare – Colombia · 16 de septiembre de 2026
+        </div>
+        <button class="hero-cta" onclick="document.getElementById('aviso').scrollIntoView({behavior:'smooth'})">
+          Explorar la cultura
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </button>
+      </div>
+      <div class="hero-art">
+        <div class="hero-blob">
+          <svg viewBox="0 0 400 420" preserveAspectRatio="xMidYMid slice">
+            <!-- montañas -->
+            <path d="M0 260 L70 190 L130 240 L200 150 L270 230 L330 180 L400 250 L400 420 L0 420 Z" fill="#3f7359" opacity="0.85"/>
+            <!-- valle -->
+            <path d="M0 300 L100 270 L220 300 L320 265 L400 300 L400 420 L0 420 Z" fill="#2E5B45"/>
+            <!-- sol -->
+            <circle cx="300" cy="90" r="46" fill="#D99B2B"/>
+            <!-- olas pacifico -->
+            <path d="M0 350 Q50 340 100 350 T200 350 T300 350 T400 350 L400 420 L0 420 Z" fill="#1E5F86" opacity="0.75"/>
+            <!-- palmeras -->
+            <g stroke="#F2C878" stroke-width="4" fill="none" stroke-linecap="round">
+              <path d="M60 380 L60 320"/>
+              <path d="M60 322 Q40 300 20 305"/>
+              <path d="M60 322 Q80 300 100 305"/>
+              <path d="M60 322 Q60 295 60 280"/>
+            </g>
+            <g stroke="#F2C878" stroke-width="3" fill="none" stroke-linecap="round">
+              <path d="M340 390 L340 345"/>
+              <path d="M340 347 Q325 330 310 334"/>
+              <path d="M340 347 Q355 330 370 334"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hero-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          Marimba, salsa y Pacífico
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ AVISO DIFERENCIA CULTURAL ============ -->
+  <div id="aviso" class="section-tight bg-band">
+    <div class="wrap">
+      <div class="disclaimer-box reveal">
+        <strong>Una aclaración importante antes de comenzar:</strong> la Institución Educativa Fabio Riveros está ubicada en Villanueva, Casanare, una región de tradición <em>llanera</em>. Sin embargo, este proyecto investiga la <strong>cultura valluna</strong>, es decir, la cultura propia del <strong>departamento del Valle del Cauca</strong>, ubicado en el suroccidente del país. No se trata de la misma cultura ni de la misma región: son dos identidades culturales distintas dentro de la diversidad de Colombia, y a lo largo de esta página el tema investigado será exclusivamente el Valle del Cauca.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UBICACIÓN ============ -->
+<section id="ubicacion" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Geografía</div>
+      <h2>¿Dónde está el Valle del Cauca?</h2>
+      <p>El Valle del Cauca se ubica en el suroccidente de Colombia, entre la Cordillera Occidental y la Cordillera Central, con salida directa al océano Pacífico. Esta combinación de montaña, valle fértil y costa es la base física de su diversidad cultural.</p>
+    </div>
+    <div class="map-card reveal">
+      <div>
+        <ul class="map-facts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg> <span><strong>Capital:</strong> Santiago de Cali, principal centro urbano y cultural del departamento.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M12 2c2.5 3 4 7 4 10s-1.5 7-4 10c-2.5-3-4-7-4-10s1.5-7 4-10z"/></svg> <span><strong>Buenaventura:</strong> puerto principal sobre el océano Pacífico y territorio clave de la cultura afrocolombiana del departamento.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12c2-4 4-6 6-6s3 2 4 4 2 4 4 4 4-2 6-6"/></svg> <span><strong>Río Cauca:</strong> eje hídrico que atraviesa el valle geográfico y ha organizado históricamente los asentamientos de la región.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg> <span><strong>Cordilleras Occidental y Central:</strong> enmarcan el valle geográfico y dan origen a climas y paisajes muy variados.</span></li>
+        </ul>
+        <div class="formula-card">Montañas + Valle + Pacífico = diversidad cultural</div>
+      </div>
+      <div class="map-embed reveal">
+      <iframe
+        title="Mapa interactivo del Valle del Cauca y Santiago de Cali"
+        loading="lazy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-77.45%2C3.05%2C-75.55%2C4.75&amp;layer=mapnik&amp;marker=3.4516%2C-76.5320">
+      </iframe>
+      <div class="map-overlay">📍 <strong>Santiago de Cali</strong> · Valle del Cauca<br><a href="https://www.openstreetmap.org/?mlat=3.4516&amp;mlon=-76.5320#map=9/3.8/-76.5" target="_blank" rel="noopener">Abrir mapa completo ↗</a></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HISTORIA ============ -->
+<section id="historia" class="section bg-band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Origen</div>
+      <h2>Historia y origen de la identidad valluna</h2>
+      <p>La identidad cultural del Valle del Cauca se ha formado a lo largo del tiempo a partir del encuentro de distintas comunidades y experiencias históricas.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--terracotta)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div><h3>Pueblos indígenas</h3><p>Comunidades originarias que habitaron el territorio antes de la llegada española y que dejaron huellas en la toponimia y el conocimiento del entorno.</p></div>
+      <div class="card reveal"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 21h18M5 21V9l7-6 7 6v12"/></svg></div><h3>Población de origen europeo</h3><p>Llegada durante la Colonia, influyó en la fundación de ciudades, la lengua y algunas costumbres que se transformaron con el tiempo.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--gold)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><h3>Comunidades afrocolombianas</h3><p>Aportes fundamentales en música, danza, gastronomía y tradiciones, especialmente en la región del Pacífico y Buenaventura.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--blue)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg></div><h3>Comunidades campesinas</h3><p>Han sostenido la vida agrícola del valle geográfico, con saberes propios sobre la tierra, los cultivos y la vida rural.</p></div>
+      <div class="card reveal"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 9l9-6 9 6M4 10v10h16V10M9 20v-6h6v6"/></svg></div><h3>Población urbana</h3><p>El crecimiento de ciudades como Cali generó nuevas dinámicas culturales, artísticas y sociales que siguen vigentes.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--terracotta)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M17 3l4 4-11 11-4 1 1-4z"/></svg></div><h3>Una cultura en transformación</h3><p>La cultura valluna es diversa y sigue cambiando con cada nueva generación, sin dejar de reconocer sus raíces.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AFROCOLOMBIANIDAD ============ -->
+<section id="afrocolombianidad" class="section bg-green">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker" style="color:var(--gold-soft)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> Sección central</div>
+      <h2>La herencia afrocolombiana en el Valle del Cauca</h2>
+      <p>Las comunidades afrocolombianas han realizado aportes fundamentales a la música, la danza, la gastronomía, los instrumentos, el arte, las tradiciones, los conocimientos ancestrales y la identidad cultural del departamento, con especial fuerza en Buenaventura y toda la región del Pacífico vallecaucano.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><h3>Música</h3><p>El currulao, la salsa y los cantos del Pacífico llevan huellas profundas de la tradición musical afrocolombiana.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--gold)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2v20M5 8c3 0 3-4 7-4s4 4 7 4M5 16c3 0 3 4 7 4s4-4 7-4"/></svg></div><h3>Danza</h3><p>El baile es una forma de expresión, comunidad y memoria en las tradiciones afrocolombianas del Pacífico.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--terracotta)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 12h16M6 12v7a2 2 0 002 2h8a2 2 0 002-2v-7M9 8V6a3 3 0 016 0v2"/></svg></div><h3>Gastronomía</h3><p>Preparaciones tradicionales del Pacífico enriquecen la variedad culinaria del Valle del Cauca.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--blue)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 4h16v16H4zM4 9h16M9 4v16"/></svg></div><h3>Tradiciones</h3><p>Prácticas comunitarias, rituales y saberes transmitidos de generación en generación.</p></div>
+      <div class="card reveal"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div><h3>Arte</h3><p>Expresiones plásticas y artesanales con identidad propia del Pacífico colombiano.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--gold)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg></div><h3>Patrimonio</h3><p>Un legado cultural que forma parte esencial del patrimonio inmaterial del Valle del Cauca.</p></div>
+    </div>
+    <div class="reflect-box reveal" style="background:rgba(217,155,43,0.14);color:#fff;">
+      "Reconocer la Afrocolombianidad es reconocer una parte fundamental de la historia y diversidad cultural de Colombia."
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÚSICA ============ -->
+<section id="musica" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> Sonidos del Valle</div>
+      <h2>Música valluna</h2>
+      <p>Tres grandes corrientes musicales conviven en el departamento: la salsa, la música del Pacífico y la música andina.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal">
+        <div class="icon-wrap" style="background:var(--terracotta)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3>Salsa</h3>
+        <p>Santiago de Cali es reconocida como un centro fundamental de la salsa en Colombia. Uno de sus máximos representantes fue <strong>Jairo Varela</strong>, fundador del <strong>Grupo Niche</strong>, agrupación que popularizó temas como <em>"Cali Pachanguero"</em>, convertido en un himno de la ciudad.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-wrap" style="background:var(--gold)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 4v16M4 8l8-4 8 4v12l-8-4-8 4"/></svg></div>
+        <h3>Música del Pacífico</h3>
+        <p>Incluye géneros como el <strong>currulao</strong>, el <strong>bunde</strong>, la <strong>juga</strong>, el <strong>aguabajo</strong> y distintos cantos tradicionales, interpretados con marimba de chonta, cununo, bombo y guasá.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-wrap" style="background:var(--blue)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></div>
+        <h3>Música andina</h3>
+        <p>El municipio de <strong>Ginebra</strong> es reconocido por su tradición de música andina colombiana, fortalecida por el <strong>Festival Mono Núñez</strong>, en honor a <strong>Benigno "Mono" Núñez</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAILES ============ -->
+<section id="bailes" class="section bg-band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M5 8c3 0 3-4 7-4s4 4 7 4M5 16c3 0 3 4 7 4s4-4 7-4"/></svg> Movimiento y expresión</div>
+      <h2>Bailes tradicionales</h2>
+      <p>Cada baile refleja una parte distinta de la identidad valluna, desde el Pacífico hasta el ambiente urbano de Cali.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card-photo reveal">
+        <div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Show%20de%20Salsa.jpg" alt="Salsa" loading="lazy"></div><div class="body"><h3>Salsa</h3><p>Baile urbano de pareja, símbolo internacional de Cali, con giros rápidos y footwork característico.</p></div>
+      </div>
+      <div class="card-photo reveal">
+        <div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Festival%20Petronio%20%C3%81lvarez%20%28Cali%29.jpg" alt="Currulao" loading="lazy"></div><div class="body"><h3>Currulao</h3><p>Danza afrodescendiente del Pacífico, acompañada por marimba de chonta, cununo y guasá.</p></div>
+      </div>
+      <div class="card-photo reveal">
+        <div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/XV%20Petronio%20%C3%81lvarez.jpg" alt="Bunde" loading="lazy"></div><div class="body"><h3>Bunde</h3><p>Expresión musical y dancística del Pacífico, con un carácter comunitario y ceremonial.</p></div>
+      </div>
+      <div class="card-photo reveal">
+        <div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Salsa_cale%C3%B1a.jpg" alt="Bailes tradicionales andinos" loading="lazy"></div><div class="body"><h3>Bailes tradicionales andinos</h3><p>Presentes en municipios como Ginebra, ligados a la música andina colombiana.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTRUMENTOS ============ -->
+<section id="instrumentos" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> Sonoridad propia</div>
+      <h2>Instrumentos tradicionales</h2>
+      <p>Los instrumentos del Pacífico y de la música andina le dan a la cultura valluna su sonido característico.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--gold)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="10" width="18" height="6" rx="1"/><path d="M6 10V6m4 4V6m4 4V6m4 4V6"/></svg></div><h3>Marimba de chonta</h3><p>Instrumento emblemático de la música del Pacífico, elaborado con madera de chonta.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--terracotta)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><ellipse cx="12" cy="12" rx="8" ry="6"/></svg></div><h3>Cununo</h3><p>Tambor cónico de origen afrodescendiente, base rítmica del currulao.</p></div>
+      <div class="card reveal"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></div><h3>Bombo</h3><p>Tambor grande que marca el pulso central de la música del Pacífico.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--blue)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="5" y="5" width="14" height="14" rx="2"/></svg></div><h3>Guasá</h3><p>Instrumento de percusión hecho con semillas, típico de la música afropacífica.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--gold)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><ellipse cx="12" cy="12" rx="6" ry="9"/></svg></div><h3>Bandola</h3><p>Instrumento de cuerda propio de la música andina colombiana.</p></div>
+      <div class="card reveal"><div class="icon-wrap" style="background:var(--terracotta)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="8" y="3" width="8" height="18" rx="2"/></svg></div><h3>Tiple</h3><p>Instrumento de cuerda característico de la música andina, presente en festivales como el Mono Núñez.</p></div>
+      <div class="card reveal"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><h3>Guitarra</h3><p>Presente tanto en la música andina como en agrupaciones populares del departamento.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GASTRONOMÍA ============ -->
+<section id="gastronomia" class="section bg-band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M6 12v7a2 2 0 002 2h8a2 2 0 002-2v-7M9 8V6a3 3 0 016 0v2"/></svg> Sabores del Valle</div>
+      <h2>Sabores de la cultura valluna</h2>
+      <p>La gastronomía también cuenta la historia de un pueblo: cada plato refleja su geografía, su historia y sus comunidades.</p>
+    </div>
+    <div class="grid grid-4" id="gastro-grid">
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina.jpg" alt="Sancocho de gallina" loading="lazy"></div><div class="body"><h3>Sancocho de gallina</h3><p>Preparación insignia del departamento, especialmente reconocida en Ginebra.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina%20criolla.jpg" alt="Arroz atollado" loading="lazy"></div><div class="body"><h3>Arroz atollado</h3><p>Plato tradicional a base de arroz, papa y carne de cerdo, típico del Valle.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cholado%20jamundi.jpg" alt="Aborrajado" loading="lazy"></div><div class="body"><h3>Aborrajado</h3><p>Preparación dulce y salada a base de plátano maduro y queso.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina.jpg" alt="Pandebono" loading="lazy"></div><div class="body"><h3>Pandebono</h3><p>Pan de queso característico de la panadería tradicional vallecaucana.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cholado%20jamundi.jpg" alt="Empanadas" loading="lazy"></div><div class="body"><h3>Empanadas</h3><p>Preparación popular presente en la cotidianidad culinaria del departamento.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Buenaventura%2C%20Colombia.jpg" alt="Fiambre" loading="lazy"></div><div class="body"><h3>Fiambre</h3><p>Comida tradicional para llevar, con arroz, carnes y plátano envueltos en hoja.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina%20criolla.jpg" alt="Manjarblanco" loading="lazy"></div><div class="body"><h3>Manjarblanco</h3><p>Dulce tradicional de leche, base también de las famosas brevas con manjarblanco.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cholado%20jamundi.jpg" alt="Cholado" loading="lazy"></div><div class="body"><h3>Cholado</h3><p>Postre helado de frutas asociado especialmente con Jamundí.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina.jpg" alt="Champús" loading="lazy"></div><div class="body"><h3>Champús</h3><p>Bebida tradicional a base de maíz y frutas, muy asociada con Cali.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cholado%20jamundi.jpg" alt="Lulada" loading="lazy"></div><div class="body"><h3>Lulada</h3><p>Bebida refrescante de lulo, típica de la ciudad de Cali.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina%20criolla.jpg" alt="Brevas con manjarblanco" loading="lazy"></div><div class="body"><h3>Brevas con manjarblanco</h3><p>Postre clásico que combina brevas en almíbar con manjarblanco.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><img class="photo-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Fotograf%C3%ADa%20Buenaventura.jpg" alt="Preparaciones del Pacífico" loading="lazy"></div><div class="body"><h3>Preparaciones del Pacífico</h3><p>Recetas tradicionales con pescado, coco y productos propios de la costa pacífica.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VESTUARIO ============ -->
+<section id="vestuario" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4l6 3 6-3 3 5-4 2v10H7V11L3 9z"/></svg> Identidad visible</div>
+      <h2>Vestuario tradicional</h2>
+      <p>El vestuario utilizado en representaciones folclóricas varía según la región y el contexto. No existe un único traje que represente toda la diversidad del Valle del Cauca.</p>
+    </div>
+    <div class="two-col">
+      <div class="card reveal">
+        <div class="icon-wrap" style="background:var(--terracotta)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3v4M6 21l2-10h8l2 10"/></svg></div>
+        <h3>Mujeres</h3>
+        <p>Faldas amplias de colores vivos, blusas frescas, pañuelos y accesorios que acompañan los movimientos del baile, especialmente en presentaciones de salsa y folclor del Pacífico.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-wrap" style="background:var(--blue)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M6 4l6 3 6-3 3 5-4 2v10H7V11L3 9z"/></svg></div>
+        <h3>Hombres</h3>
+        <p>Camisas frescas, pantalones cómodos para el baile, sombreros y colores igualmente vivos que complementan la puesta en escena de las danzas tradicionales.</p>
+      </div>
+    </div>
+    <p class="reveal" style="margin-top:24px;font-style:italic;">Es importante aclarar que estas descripciones corresponden a representaciones folclóricas generales; la vida cotidiana de las comunidades del Valle del Cauca es mucho más diversa que un único vestuario.</p>
+  </div>
+</section>
+
+<!-- ============ FLORA Y FAUNA ============ -->
+<section id="flora-fauna" class="section bg-band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12M12 12C7 12 4 9 4 4c5 0 8 3 8 8zM12 12c5 0 8-3 8-8-5 0-8 3-8 8z"/></svg> Naturaleza valluna</div>
+      <h2>Flora y fauna</h2>
+      <p>La diversidad de pisos térmicos, desde la costa Pacífica hasta las cordilleras, hace del Valle del Cauca un territorio de gran riqueza natural.</p>
+    </div>
+    <div class="two-col">
+      <div>
+        <h3 style="margin-bottom:16px;">Flora</h3>
+        <div class="grid grid-2">
+          <div class="card reveal"><h3 style="font-size:1rem;">Palma</h3><p>Presente en diversas zonas del departamento, símbolo del paisaje tropical.</p></div>
+          <div class="card reveal"><h3 style="font-size:1rem;">Guadua</h3><p>Especie vegetal representativa de la región andina colombiana.</p></div>
+          <div class="card reveal"><h3 style="font-size:1rem;">Chontaduro</h3><p>Fruto tradicional del Pacífico, muy consumido en la región.</p></div>
+          <div class="card reveal"><h3 style="font-size:1rem;">Caña de azúcar y café</h3><p>Cultivos importantes en la economía y el paisaje del valle geográfico.</p></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:16px;">Fauna</h3>
+        <div class="grid grid-2">
+          <div class="card reveal"><h3 style="font-size:1rem;">Monos y guatines</h3><p>Especies presentes en los bosques tropicales del departamento.</p></div>
+          <div class="card reveal"><h3 style="font-size:1rem;">Aves y fauna marina</h3><p>Gran variedad en la zona del Pacífico, especialmente cerca de Buenaventura.</p></div>
+          <div class="card reveal"><h3 style="font-size:1rem;">Armadillos</h3><p>Presentes en zonas boscosas y rurales del territorio.</p></div>
+          <div class="card reveal"><h3 style="font-size:1rem;">Oso de anteojos</h3><p>Habita en zonas montañosas de mayor altitud del departamento.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIESTAS ============ -->
+<section id="fiestas" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21l4-10 4 6 4-8 4 12H4z"/></svg> Celebraciones</div>
+      <h2>Fiestas y celebraciones</h2>
+      <p>Tres grandes celebraciones sintetizan la riqueza cultural del departamento.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <h3>Feria de Cali</h3>
+        <p>Una de las fiestas más importantes de la ciudad, estrechamente relacionada con la salsa, el baile y la cultura popular caleña.</p>
+      </div>
+      <div class="tl-item reveal">
+        <h3>Festival de Música del Pacífico Petronio Álvarez</h3>
+        <p>Se realiza en Cali y reúne música, danza, gastronomía y artesanías de las comunidades del Pacífico colombiano.</p>
+      </div>
+      <div class="tl-item reveal">
+        <h3>Festival Mono Núñez</h3>
+        <p>Celebrado en Ginebra, es un espacio fundamental para la música andina colombiana, en homenaje a Benigno "Mono" Núñez.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERSONAJES ============ -->
+<section id="personajes" class="section bg-band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> Voces del Valle</div>
+      <h2>Personajes destacados</h2>
+      <p>Figuras que han dejado huella en la música, el arte, el cine, la literatura y la identidad cultural del departamento.</p>
+    </div>
+    <div class="grid grid-4" id="personajes-grid"></div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="person-modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ============ TURISMO ============ -->
+<section id="turismo" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Para conocer</div>
+      <h2>Sitios turísticos</h2>
+      <p>Lugares emblemáticos que muestran la diversidad geográfica y cultural del Valle del Cauca.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#2E5B45"/><path d="M90 130V60h6v-15h8v15h6v70Z" fill="#e8e8e8"/></svg></div><div class="body"><span class="tag">Cali</span><h3>Cristo Rey</h3><p>Monumento emblemático ubicado en un cerro con vista panorámica sobre Santiago de Cali.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#D99B2B"/><rect x="70" y="50" width="60" height="70" fill="#fff" opacity="0.9"/></svg></div><div class="body"><span class="tag">Buga</span><h3>Basílica del Señor de los Milagros</h3><p>Importante santuario religioso ubicado en el municipio de Guadalajara de Buga.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#B94A2C"/><rect x="60" y="70" width="80" height="50" fill="#f2d9b0"/></svg></div><div class="body"><span class="tag">El Cerrito</span><h3>Hacienda El Paraíso</h3><p>Casa histórica relacionada con la obra literaria "María" de Jorge Isaacs.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#1E5F86"/><ellipse cx="100" cy="90" rx="80" ry="25" fill="#4a90c2"/></svg></div><div class="body"><span class="tag">Calima</span><h3>Lago Calima</h3><p>Embalse rodeado de montañas, reconocido también por su valor arqueológico.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#F2C878"/><rect x="60" y="55" width="80" height="60" fill="#B94A2C"/></svg></div><div class="body"><span class="tag">Roldanillo</span><h3>Museo Rayo</h3><p>Espacio cultural dedicado al legado artístico de Omar Rayo.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#2E5B45"/><path d="M0 120 L60 40 L120 100 L160 60 L200 120Z" fill="#1D3F2F"/></svg></div><div class="body"><span class="tag">Cali</span><h3>Farallones de Cali</h3><p>Parque natural con gran biodiversidad, cercano a la ciudad de Cali.</p></div></div>
+      <div class="card-photo reveal"><div class="art"><svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#1E5F86"/><path d="M0 100 Q50 80 100 100 T200 100V150H0Z" fill="#0d3652"/></svg></div><div class="body"><span class="tag">Buenaventura</span><h3>Bahía Málaga</h3><p>Reconocida por su biodiversidad marina y su importancia para las comunidades del Pacífico.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DATOS CURIOSOS ============ -->
+<section id="curiosos" class="section bg-green">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker" style="color:var(--gold-soft)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg> Interactivo</div>
+      <h2>¿Sabías que...?</h2>
+      <p>Haz clic sobre cada tarjeta para descubrir un dato curioso sobre la cultura valluna.</p>
+    </div>
+    <div class="grid grid-4" id="curiosidades-grid"></div>
+  </div>
+</section>
+
+<!-- ============ ELEMENTOS ============ -->
+<section id="elementos" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>La cultura valluna en 10 elementos</h2>
+      <p>Una síntesis visual de lo que compone la identidad cultural del Valle del Cauca.</p>
+    </div>
+    <div class="grid grid-4" id="elementos-grid"></div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section id="galeria" class="section bg-band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg> Álbum visual</div>
+      <h2>Galería</h2>
+      <p>Ilustraciones organizadas por categoría. Haz clic para verlas en detalle. Esta galería usa ilustraciones propias; se recomienda reemplazarlas por fotografías reales con crédito antes de la exposición.</p>
+    </div>
+    <div class="filters" id="gallery-filters"></div>
+    <div class="masonry" id="gallery-grid"></div>
+  </div>
+</section>
+
+<div id="lightbox">
+  <button id="lightbox-close" aria-label="Cerrar imagen">&times;</button>
+  <div class="lb-content">
+    <div class="lb-art" id="lb-art"></div>
+    <div class="lb-caption"><h3 id="lb-title"></h3><p id="lb-desc" style="margin:0;"></p></div>
+  </div>
+</div>
+
+<!-- ============ GLOSARIO ============ -->
+<section id="glosario" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg> Vocabulario</div>
+      <h2>Glosario</h2>
+      <p>Haz clic sobre cada palabra para ver su definición.</p>
+    </div>
+    <div class="glossary-list" id="glossary-list"></div>
+  </div>
+</section>
+
+<!-- ============ REFLEXIÓN ============ -->
+<section id="reflexion" class="section">
+  <div class="wrap">
+    <h2 style="color:#fff;">¿Por qué es importante conocer la cultura valluna?</h2>
+    <p>La cultura valluna es una muestra de la diversidad cultural de Colombia. Sus músicas, bailes, sabores, fiestas, paisajes, artistas y tradiciones son el resultado de una historia construida por diferentes comunidades.</p>
+    <p>Los aportes de las comunidades afrocolombianas son fundamentales para comprender la identidad del Valle del Cauca, especialmente en territorios como Buenaventura y en las diferentes expresiones culturales del Pacífico.</p>
+    <p>Como estudiantes del grado 11-D de la Institución Educativa Fabio Riveros, queremos reconocer esta riqueza y demostrar que conocer otras culturas nos ayuda a valorar la diversidad de nuestro país.</p>
+    <p class="final-phrase">"Conocer, valorar y preservar nuestra cultura es una forma de mantener viva nuestra historia."</p>
+  </div>
+</section>
+
+<!-- ============ SOBRE NOSOTROS ============ -->
+<section id="nosotros" class="section bg-band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> Créditos</div>
+      <h2>Un proyecto de 11-D</h2>
+      <p>Este proyecto fue realizado por los estudiantes del grado 11-D de la Institución Educativa Fabio Riveros de Villanueva, Casanare, con motivo de la conmemoración del Día de la Afrocolombianidad.</p>
+    </div>
+    <div class="about-badge reveal">
+      <span>GRADO 11-D</span>
+      <span>INSTITUCIÓN EDUCATIVA FABIO RIVEROS</span>
+      <span>VILLANUEVA, CASANARE</span>
+      <span>2026</span>
+    </div>
+    <div class="student-slot reveal">Espacio reservado para los nombres de los estudiantes del grado 11-D.</div>
+  </div>
+</section>
+
+<!-- ============ FUENTES ============ -->
+<section id="fuentes" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg> Referencias</div>
+      <h2>Fuentes</h2>
+      <p>Se recomienda consultar y completar estas referencias institucionales antes de la presentación final.</p>
+    </div>
+    <ul class="sources-list reveal">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg> Gobernación del Valle del Cauca — valledelcauca.gov.co</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg> Secretaría de Cultura del Valle del Cauca</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg> Ministerio de las Culturas, las Artes y los Saberes de Colombia — mincultura.gov.co</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg> Ministerio de Educación Nacional — mineducacion.gov.co</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg> Alcaldía de Santiago de Cali — cali.gov.co</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg> Alcaldía de Buenaventura</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg> Festival de Música del Pacífico Petronio Álvarez y Festival Mono Núñez (fuentes oficiales de cada festival)</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg> Museo Rayo — Roldanillo, Valle del Cauca</li>
+    </ul>
+    <div class="disclaimer-box reveal" style="margin-top:18px;">
+<strong>Fotografías:</strong> las imágenes incorporadas en esta versión provienen de Wikimedia Commons y se enlazan mediante sus archivos públicos. Revisa la licencia y atribución indicada en cada archivo antes de publicar o entregar el proyecto.
+</div>
+    <div class="disclaimer-box reveal" style="margin-top:24px;">
+      <strong>Nota para los estudiantes:</strong> antes de la exposición, verifiquen cada dato en las fuentes oficiales anteriores y agreguen los enlaces exactos consultados. No se debe presentar información sin confirmar en una fuente confiable.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Cultura Valluna</div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Proyecto de Afrocolombianidad — Grado 11-D<br>Institución Educativa Fabio Riveros<br>Villanueva, Casanare – Colombia<br>2026</p>
+      </div>
+      <div>
+        <h4>Explorar</h4>
+        <div class="footer-links">
+          <a href="#ubicacion">Ubicación</a>
+          <a href="#afrocolombianidad">Afrocolombianidad</a>
+          <a href="#musica">Música</a>
+          <a href="#gastronomia">Gastronomía</a>
+          <a href="#galeria">Galería</a>
+        </div>
+      </div>
+      <div>
+        <h4>Más</h4>
+        <div class="footer-links">
+          <a href="#personajes">Personajes</a>
+          <a href="#turismo">Turismo</a>
+          <a href="#glosario">Glosario</a>
+          <a href="#fuentes">Fuentes</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Una Colombia diversa se construye reconociendo todas sus culturas.</span>
+      <span>© 2026 · Grado 11-D</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+/* ---------------- Progress bar ---------------- */
+const progressBar = document.getElementById('progress-bar');
+function updateProgress(){
+  const h = document.documentElement;
+  const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  progressBar.style.width = scrolled + '%';
+  document.getElementById('back-to-top').classList.toggle('show', h.scrollTop > 500);
+}
+document.addEventListener('scroll', updateProgress);
+updateProgress();
+document.getElementById('back-to-top').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ---------------- Menu ---------------- */
+const menuToggle = document.getElementById('menu-toggle');
+const mainMenu = document.getElementById('main-menu');
+menuToggle.addEventListener('click', ()=>{
+  const open = mainMenu.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', open);
+});
+mainMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+  mainMenu.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded','false');
+}));
+
+/* ---------------- Reveal on scroll ---------------- */
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.15});
+revealEls.forEach(el=>io.observe(el));
+
+/* ================= DATA ================= */
+
+const personajes = [
+  {nombre:"Leonor González Mina", rol:'"La Negra Grande de Colombia" · Cantante y actriz', lugar:"Robles, Jamundí, Valle del Cauca", aporte:"Reconocida como una figura pionera para la representación afrocolombiana en la música y la actuación en Colombia, destacada representante del folclor nacional.", color:"var(--terracotta)"},
+  {nombre:"Petronio Álvarez", rol:"Músico y compositor", lugar:"Buenaventura, Valle del Cauca", aporte:"Su nombre da identidad al Festival de Música del Pacífico Petronio Álvarez, en reconocimiento a su aporte a la música de la región.", color:"var(--blue)"},
+  {nombre:"Jairo Varela", rol:"Músico, compositor y fundador del Grupo Niche", lugar:"Relacionado con Cali y la salsa colombiana", aporte:"Impulsó la salsa caleña a nivel nacional e internacional con el Grupo Niche.", color:"var(--gold)"},
+  {nombre:"Omar Rayo", rol:"Artista plástico", lugar:"Roldanillo, Valle del Cauca", aporte:"Su legado artístico dio origen al Museo Rayo, espacio cultural del municipio.", color:"var(--green)"},
+  {nombre:"Jorge Isaacs", rol:"Escritor", lugar:"Cali, Valle del Cauca", aporte:"Autor de la novela \"María\", una de las obras más importantes de la literatura colombiana del siglo XIX.", color:"var(--terracotta)"},
+  {nombre:'Benigno "Mono" Núñez', rol:"Músico y compositor", lugar:"Relacionado con Ginebra, Valle del Cauca", aporte:"Su nombre identifica al Festival Mono Núñez, referente de la música andina colombiana.", color:"var(--blue)"},
+  {nombre:"Enrique Buenaventura", rol:"Dramaturgo y director teatral", lugar:"Relacionado con Cali", aporte:"Figura clave del teatro colombiano contemporáneo desde el Valle del Cauca.", color:"var(--gold)"},
+  {nombre:"Carlos Mayolo", rol:"Director y guionista de cine", lugar:"Cali, Valle del Cauca", aporte:"Figura importante del movimiento cinematográfico conocido como Caliwood.", color:"var(--green)"},
+  {nombre:"Luis Ospina", rol:"Director y productor de cine", lugar:"Cali, Valle del Cauca", aporte:"Figura destacada de Caliwood, corriente cinematográfica surgida en Cali.", color:"var(--terracotta)"},
+];
+
+const personajesGrid = document.getElementById('personajes-grid');
+personajes.forEach((p,i)=>{
+  const div = document.createElement('div');
+  div.className = 'person-card reveal';
+  div.innerHTML = `
+    <div class="person-photo" style="background:linear-gradient(150deg, ${p.color}, var(--green-deep));">
+      <svg viewBox="0 0 100 120"><circle cx="50" cy="42" r="22" fill="rgba(255,255,255,0.85)"/><path d="M15 118c0-24 15-38 35-38s35 14 35 38Z" fill="rgba(255,255,255,0.85)"/></svg>
+    </div>
+    <div class="person-body">
+      <h3>${p.nombre}</h3>
+      <div class="person-role">${p.rol}</div>
+      <p>${p.lugar}</p>
+      <button class="more-btn" data-i="${i}">Conocer más</button>
+    </div>`;
+  personajesGrid.appendChild(div);
+  io.observe(div);
+});
+personajesGrid.addEventListener('click', (e)=>{
+  if(e.target.classList.contains('more-btn')){
+    const p = personajes[e.target.dataset.i];
+    document.getElementById('modal-body').innerHTML = `
+      <div class="person-photo" style="border-radius:16px;margin-bottom:18px;background:linear-gradient(150deg, ${p.color}, var(--green-deep));">
+        <svg viewBox="0 0 100 120"><circle cx="50" cy="42" r="22" fill="rgba(255,255,255,0.85)"/><path d="M15 118c0-24 15-38 35-38s35 14 35 38Z" fill="rgba(255,255,255,0.85)"/></svg>
+      </div>
+      <h3 style="margin-bottom:4px;">${p.nombre}</h3>
+      <div class="person-role" style="margin-bottom:14px;">${p.rol}</div>
+      <p><strong>Lugar:</strong> ${p.lugar}</p>
+      <p><strong>Aporte cultural:</strong> ${p.aporte}</p>`;
+    document.getElementById('person-modal').classList.add('active');
+  }
+});
+document.getElementById('modal-close').addEventListener('click', ()=>document.getElementById('person-modal').classList.remove('active'));
+document.getElementById('person-modal').addEventListener('click', (e)=>{ if(e.target.id==='person-modal') e.target.classList.remove('active'); });
+
+/* ---------------- Datos curiosos ---------------- */
+const curiosidades = [
+"Cali es reconocida por su enorme tradición salsera.",
+"El Valle del Cauca tiene territorio sobre el océano Pacífico.",
+"Buenaventura pertenece al Valle del Cauca.",
+"La gastronomía del departamento es muy diversa.",
+"Existen registros de cientos de preparaciones gastronómicas tradicionales en el departamento.",
+"Ginebra es reconocida por su sancocho de gallina.",
+"Ginebra también es importante por su tradición de música andina.",
+'El Festival Mono Núñez lleva el nombre de Benigno "Mono" Núñez.',
+"El Festival Petronio Álvarez se realiza en Cali y celebra expresiones culturales del Pacífico.",
+"La marimba de chonta es uno de los instrumentos más representativos de la música tradicional del Pacífico.",
+"Leonor González Mina fue una figura pionera para la representación afrocolombiana.",
+"Omar Rayo nació en Roldanillo.",
+"Jorge Isaacs nació en Cali.",
+"Buenaventura posee una gran riqueza cultural y natural.",
+"El Valle del Cauca combina montaña, valle agrícola y costa del Pacífico.",
+"La cultura valluna no se limita a la salsa.",
+"En el departamento existen expresiones afrocolombianas, campesinas, indígenas y urbanas.",
+"El sancocho de gallina es una preparación muy representativa de la gastronomía valluna.",
+"El champús y la lulada son bebidas muy asociadas con Cali.",
+"El cholado está especialmente asociado con Jamundí.",
+"Roldanillo posee un importante legado artístico relacionado con Omar Rayo.",
+"La cultura del Pacífico conserva tradiciones transmitidas de generación en generación."
+];
+const curGrid = document.getElementById('curiosidades-grid');
+curiosidades.forEach((texto,i)=>{
+  const wrap = document.createElement('div');
+  wrap.className = 'flip-card reveal';
+  wrap.innerHTML = `<div class="flip-inner">
+    <div class="flip-front">¿Sabías que...? <br><span style="font-size:0.8rem;opacity:0.7;">#${i+1}</span></div>
+    <div class="flip-back">${texto}</div>
+  </div>`;
+  wrap.addEventListener('click', ()=>wrap.classList.toggle('flipped'));
+  curGrid.appendChild(wrap);
+  io.observe(wrap);
+});
+
+/* ---------------- 10 elementos ---------------- */
+const elementos = [
+  ["Música","La salsa, el currulao y la música andina conviven en el departamento."],
+  ["Danza","El baile es memoria, identidad y celebración comunitaria."],
+  ["Gastronomía","Sabores que cuentan la historia de distintas comunidades."],
+  ["Instrumentos","Marimba, cununo, bombo y guasá dan sonido propio al Pacífico."],
+  ["Vestuario","Colores vivos que acompañan las representaciones folclóricas."],
+  ["Fiestas","La Feria de Cali, el Petronio Álvarez y el Mono Núñez."],
+  ["Arte","Expresiones plásticas con sello propio, como el legado de Omar Rayo."],
+  ["Literatura","Obras como \"María\" de Jorge Isaacs marcan la identidad literaria regional."],
+  ["Naturaleza","Montaña, valle y Pacífico en un mismo territorio."],
+  ["Herencia afrocolombiana","Base fundamental de la identidad cultural del departamento."],
+];
+const elGrid = document.getElementById('elementos-grid');
+elementos.forEach(([t,d])=>{
+  const div = document.createElement('div');
+  div.className = 'card elemento reveal';
+  div.innerHTML = `<div class="icon-wrap" style="margin:0 auto 14px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></div><h3>${t}</h3><p>${d}</p>`;
+  elGrid.appendChild(div);
+  io.observe(div);
+});
+
+/* ---------------- Galería ---------------- */
+const categorias = ["Todas","Cali","Salsa","Gastronomía","Pacífico","Afrocolombianidad","Música","Bailes","Naturaleza","Personajes","Turismo","Fiestas"];
+const galeriaItems = [
+  {cat:"Cali", titulo:"Vida cultural de Cali", desc:"Panorámica de Santiago de Cali y su paisaje urbano.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/SANTIAGO%20DE%20CALI%2C%20VALLE%20DEL%20CAUCA.jpg"},
+  {cat:"Salsa", titulo:"Ritmo de la salsa", desc:"La salsa es una de las expresiones culturales más reconocidas de Cali.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Show%20de%20Salsa.jpg"},
+  {cat:"Gastronomía", titulo:"Sancocho de gallina", desc:"Plato tradicional presente en la gastronomía colombiana y vallecaucana.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20gallina.jpg"},
+  {cat:"Pacífico", titulo:"Buenaventura y el Pacífico", desc:"Paisaje de Buenaventura, territorio clave del Pacífico vallecaucano.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Buenaventura%2C%20Colombia.jpg"},
+  {cat:"Afrocolombianidad", titulo:"Festival Petronio Álvarez", desc:"Encuentro cultural que visibiliza expresiones del Pacífico colombiano.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Festival%20Petronio%20%C3%81lvarez%20%28Cali%29.jpg"},
+  {cat:"Música", titulo:"Marimba y tradición del Pacífico", desc:"La marimba de chonta y los cantos son parte esencial de la tradición musical afropacífica.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/In%C3%A9s%20Granja.jpg"},
+  {cat:"Bailes", titulo:"Salsa caleña", desc:"Expresión dancística característica de Santiago de Cali.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Salsa%20cale%C3%B1a.jpg"},
+  {cat:"Naturaleza", titulo:"Litoral Pacífico", desc:"Paisajes naturales asociados con Buenaventura y la costa del Pacífico.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Fotograf%C3%ADa%20Buenaventura.jpg"},
+  {cat:"Turismo", titulo:"Cristo Rey y Cali", desc:"Vista de la ciudad de Cali desde el sector de Cristo Rey.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/MUNICIPIO%20DE%20SANTIAGO%20DE%20CALI%2C%20VALLE%20DEL%20CAUCA.jpg"},
+  {cat:"Fiestas", titulo:"Feria de Cali", desc:"Celebración cultural de gran importancia para la ciudad.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Feria%20de%20Cali%2025.jpg"},
+  {cat:"Gastronomía", titulo:"Cholado de Jamundí", desc:"Postre helado de frutas asociado especialmente con Jamundí.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Cholado%20jamundi.jpg"},
+  {cat:"Cali", titulo:"Panorámica de Cali", desc:"Vista panorámica de Santiago de Cali, capital del Valle del Cauca.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Panor%C3%A1mica%20-%20Cali%20-%20Valle%20del%20Cauca%20-%20Colombia.jpg"}
+];
+
+const filtersEl = document.getElementById('gallery-filters');
+categorias.forEach((c,i)=>{
+  const btn = document.createElement('button');
+  btn.className = 'filter-btn'+(i===0?' active':'');
+  btn.textContent = c;
+  btn.dataset.cat = c;
+  filtersEl.appendChild(btn);
+});
+const galGrid = document.getElementById('gallery-grid');
+function renderGallery(filter){
+  galGrid.innerHTML='';
+  galeriaItems.filter(it=>filter==='Todas'||it.cat===filter).forEach((it,idx)=>{
+    const fig = document.createElement('figure');
+    fig.className='masonry-item';
+    fig.innerHTML = `<img class="art gallery-img" src="${it.img}" alt="${it.titulo}" loading="lazy"><figcaption>${it.titulo}<div class="gallery-credit">Wikimedia Commons · fotografía</div></figcaption>`;
+    fig.addEventListener('click', ()=>openLightbox(it));
+    galGrid.appendChild(fig);
+  });
+}
+renderGallery('Todas');
+filtersEl.addEventListener('click', (e)=>{
+  if(e.target.classList.contains('filter-btn')){
+    filtersEl.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    e.target.classList.add('active');
+    renderGallery(e.target.dataset.cat);
+  }
+});
+function openLightbox(it){
+  document.getElementById('lb-art').innerHTML = `<img src="${it.img}" alt="${it.titulo}">`;
+  document.getElementById('lb-title').textContent = it.titulo;
+  document.getElementById('lb-desc').textContent = it.desc + ' (Categoría: ' + it.cat + ')';
+  document.getElementById('lightbox').classList.add('active');
+}
+document.getElementById('lightbox-close').addEventListener('click', ()=>document.getElementById('lightbox').classList.remove('active'));
+document.getElementById('lightbox').addEventListener('click',(e)=>{ if(e.target.id==='lightbox') e.target.classList.remove('active'); });
+
+/* ---------------- Glosario ---------------- */
+const glosario = [
+  ["Cultura","Conjunto de conocimientos, creencias, costumbres y expresiones artísticas que caracterizan a un grupo humano."],
+  ["Afrocolombianidad","Reconocimiento de la identidad, historia y aportes de las comunidades afrodescendientes de Colombia."],
+  ["Valluno / valluna","Perteneciente o relativo al departamento del Valle del Cauca."],
+  ["Currulao","Danza y género musical del Pacífico colombiano, de raíz afrodescendiente."],
+  ["Marimba de chonta","Instrumento musical de percusión hecho con madera de chonta, típico del Pacífico."],
+  ["Cununo","Tambor cónico tradicional utilizado en la música del Pacífico colombiano."],
+  ["Guasá","Instrumento de percusión elaborado con semillas, propio de la música afropacífica."],
+  ["Patrimonio cultural","Conjunto de bienes materiales e inmateriales que una comunidad reconoce como parte de su identidad."],
+  ["Salsa","Género musical y de baile de gran arraigo en Santiago de Cali."],
+  ["Folclor","Conjunto de tradiciones, creencias, música y costumbres propias de un pueblo o región."],
+];
+const glossaryList = document.getElementById('glossary-list');
+glosario.forEach(([t,d])=>{
+  const item = document.createElement('div');
+  item.className='g-term';
+  item.innerHTML = `<div class="g-term-head">${t} <span class="g-arrow">›</span></div><div class="g-def"><div class="g-def-inner">${d}</div></div>`;
+  item.addEventListener('click', ()=>{
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.g-term.open').forEach(o=>{o.classList.remove('open'); o.querySelector('.g-def').style.maxHeight=null;});
+    if(!wasOpen){ item.classList.add('open'); const def=item.querySelector('.g-def'); def.style.maxHeight = def.scrollHeight+'px'; }
+  });
+  glossaryList.appendChild(item);
+});
+</script>
+</body>
+</html>
