@@ -1,5 +1,9 @@
-FOTOS QUE TODAVIA SE PUEDEN MEJORAR
+FOTOS REVISADAS — 12/09/2026
 
-Para una versión completamente offline todavía conviene descargar y guardar localmente fotos individuales para: Cununo, Bombo, Guasá, Bandola, Guitarra, vestuario de mujeres y hombres, varias especies de flora/fauna, Museo Rayo y Farallones de Cali.
+Se corrigieron las fotografías que no correspondían con el nombre de la tarjeta en:
+- Gastronomía: arroz atollado, aborrajado, pandebono, empanadas, fiambre, manjarblanco, champús, lulada, brevas con manjarblanco y preparaciones del Pacífico.
+- Turismo: Museo Rayo, Farallones de Cali y Bahía Málaga.
 
-La página ya tiene imágenes reales o reutilizables en las secciones prioritarias y no usa fotografías tomadas al azar de Google Imágenes.
+Las imágenes de estas tarjetas ahora apuntan a fotografías específicas de cada tema en Wikimedia Commons.
+
+Quedan como siguiente mejora opcional otras secciones que todavía pueden recibir más fotografías locales, especialmente instrumentos tradicionales, vestuario, flora/fauna y herencia afrocolombiana.
