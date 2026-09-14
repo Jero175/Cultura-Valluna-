@@ -37,3 +37,31 @@
 @media(max-width:600px){
   .afro-topic-grid .topic-photo{height:210px;}
 }
+
+/* ===== Organización final de fotografías ===== */
+.afro-topic-grid .topic-card{min-height:0;height:100%;}
+.afro-topic-grid .topic-photo{height:175px;aspect-ratio:16/9;object-fit:cover;}
+.afro-topic-grid{grid-auto-rows:1fr;}
+.media-card{overflow:hidden;}
+.media-card .feature-photo{height:145px;margin:-26px -26px 18px;}
+.media-card .feature-photo img{object-fit:cover;}
+#musica .grid-3 .media-card{height:100%;}
+#instrumentos .grid-4 .media-card{height:100%;}
+#instrumentos .feature-photo{height:125px;}
+#vestuario .two-col .media-card{height:100%;}
+#vestuario .feature-photo{height:185px;}
+#flora-fauna .two-col{align-items:start;}
+#flora-fauna .grid-2{grid-auto-rows:1fr;}
+#flora-fauna .media-card{height:100%;}
+#flora-fauna .feature-photo{height:145px;}
+#flora-fauna .section-photo{height:250px;}
+@media(max-width:900px){
+  .afro-topic-grid .topic-photo{height:190px;}
+  #instrumentos .grid-4 .media-card{height:auto;}
+}
+@media(max-width:600px){
+  .afro-topic-grid{grid-auto-rows:auto;}
+  .afro-topic-grid .topic-photo{height:210px;}
+  #flora-fauna .section-photo{height:220px;}
+  #vestuario .feature-photo{height:200px;}
+}
