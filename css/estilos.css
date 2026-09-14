@@ -5,3 +5,35 @@
 .card .mini-photo{width:100%;height:150px;object-fit:cover;border-radius:14px;margin-bottom:14px;display:block;}
 .card-photo .art img.photo-art{width:100%;height:100%;object-fit:cover;display:block;}
 .tl-item .tl-photo{object-fit:cover;}
+
+/* ---------- Tarjetas de Afrocolombianidad: imágenes organizadas ---------- */
+.afro-topic-grid{align-items:stretch;}
+.afro-topic-grid .topic-card{
+  padding:0;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+}
+.afro-topic-grid .topic-photo{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  object-position:center;
+  flex:none;
+  background:rgba(255,255,255,.08);
+  transition:transform .45s ease;
+}
+.afro-topic-grid .topic-card:hover .topic-photo{transform:scale(1.035);}
+.afro-topic-grid .topic-content{
+  padding:0 20px 22px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+.afro-topic-grid .topic-content .icon-wrap{margin-top:14px;}
+.afro-topic-grid .topic-content h3{margin-bottom:8px;}
+.afro-topic-grid .topic-content p{margin-bottom:0;}
+@media(max-width:600px){
+  .afro-topic-grid .topic-photo{height:210px;}
+}
