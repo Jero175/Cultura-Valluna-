@@ -9,8 +9,10 @@ Las imágenes de estas tarjetas ahora apuntan a fotografías específicas de cad
 ACTUALIZACIÓN — 14/09/2026
 Se enlazaron en el HTML las fotos de Museo Rayo y Bahía Málaga que ya estaban documentadas en CREDITOS_IMAGENES.txt pero que la tarjeta de Turismo aún no usaba (mostraba una foto genérica de festivales y de la marina de Buenaventura, respectivamente).
 
+ACTUALIZACIÓN — 14/09/2026 (2)
+Se agregaron fotos propias de Cununo, Bombo y Guasá (img/cununo.jpg, img/bombo.jpg, img/guasa.jpg), recortadas de una lámina de referencia suministrada por los estudiantes. Ya no comparten la foto de la marimba y también se añadieron a la galería.
+
 PENDIENTE REAL (sin foto propia todavía):
-- Instrumentos del Pacífico: Cununo, Bombo y Guasá usan las tres la misma foto de la marimba (img/marimba.jpg). Falta una fotografía específica para cada uno; no se encontró en Wikimedia Commons una foto verificable y con licencia libre de estos instrumentos en particular.
 - Flora y fauna: "Monos y guatines" y "Aves y fauna marina" usan la misma foto genérica (img/valle-pacifico/01_fauna_colombia.jpg). Falta una segunda foto distinta para una de las dos tarjetas.
 
 Quedan como siguiente mejora opcional otras secciones que todavía pueden recibir más fotografías locales, especialmente vestuario y herencia afrocolombiana.
