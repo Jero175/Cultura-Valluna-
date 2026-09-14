@@ -1,93 +1,93 @@
 CRÉDITOS DE IMÁGENES — CULTURA VALLUNA
 
-Las imágenes externas añadidas/corregidas en esta versión provienen de Wikimedia Commons y se usan bajo las licencias indicadas en sus páginas de archivo. Se debe conservar esta atribución si el proyecto se publica.
+============================================================
+1) IMÁGENES DE WIKIMEDIA COMMONS (licencia verificada)
+============================================================
+Estas imágenes se cargan directamente desde Wikimedia Commons y se
+usan bajo las licencias indicadas en sus páginas de archivo. Se debe
+conservar esta atribución si el proyecto se publica. El sitio
+necesita Internet para mostrarlas (no están copiadas dentro del ZIP).
 
-GASTRONOMÍA — CORRECCIONES
-1. Arroz atollado
-   Archivo: Arroz atollado.jpg
-   Autor: Olavia Kite
-   Licencia: CC BY 2.0
-   Fuente: https://commons.wikimedia.org/wiki/File:Arroz_atollado.jpg
+GASTRONOMÍA
+1. Arroz atollado — Arroz atollado.jpg — Autor: Olavia Kite — CC BY 2.0
+   https://commons.wikimedia.org/wiki/File:Arroz_atollado.jpg
 
-2. Aborrajado
-   Archivo: Aborrajados de plátano maduro.jpg
-   Autor: Ethnobotanical Historian
-   Licencia: CC BY-SA 4.0
-   Fuente: https://commons.wikimedia.org/wiki/File:Aborrajados_de_plátano_maduro.jpg
+2. Aborrajado — Aborrajados de plátano maduro.jpg — Autor: Ethnobotanical Historian — CC BY-SA 4.0
+   https://commons.wikimedia.org/wiki/File:Aborrajados_de_plátano_maduro.jpg
 
-3. Pandebono
-   Archivo: Pandebono.jpg
-   Autor: vasquezcarlosm
-   Licencia: CC BY-SA 2.0
-   Fuente: https://commons.wikimedia.org/wiki/File:Pandebono.jpg
+3. Pandebono — Pandebono.jpg — Autor: vasquezcarlosm — CC BY-SA 2.0
+   https://commons.wikimedia.org/wiki/File:Pandebono.jpg
 
-4. Empanadas
-   Archivo: Empanada colombiana.jpg
-   Autor: Francesc Fort
-   Licencia: CC BY-SA 4.0
-   Fuente: https://commons.wikimedia.org/wiki/File:Empanada_colombiana.jpg
+4. Empanadas — Empanada colombiana.jpg — Autor: Francesc Fort — CC BY-SA 4.0
+   https://commons.wikimedia.org/wiki/File:Empanada_colombiana.jpg
 
-5. Fiambre
-   Archivo: Fiambre de Guacarí 04.jpg
-   Autor: Remux
-   Licencia: CC BY-SA 4.0
-   Fuente: https://commons.wikimedia.org/wiki/File:Fiambre_de_Guacarí_04.jpg
+5. Fiambre — Fiambre de Guacarí 04.jpg — Autor: Remux — CC BY-SA 4.0
+   https://commons.wikimedia.org/wiki/File:Fiambre_de_Guacarí_04.jpg
 
-6. Manjarblanco
-   Archivo: Manjar Blanco del Valle 01.jpg
-   Fuente: https://commons.wikimedia.org/wiki/Category:Valle_del_Cauca_Department
-   Licencia: consultar la página del archivo antes de redistribuir localmente.
+6. Cholado — Cholado jamundi.jpg — Autor: C arango — Dominio público
+   https://commons.wikimedia.org/wiki/File:Cholado_jamundi.jpg
 
-7. Cholado
-   Archivo: Cholado jamundi.jpg
-   Autor: C arango
-   Licencia: Dominio público
-   Fuente: https://commons.wikimedia.org/wiki/File:Cholado_jamundi.jpg
+7. Champús — Champus de Cali, Colombia.jpg — Autor: Maria Claudia — CC BY-SA 2.0
+   https://commons.wikimedia.org/wiki/File:Champus_de_Cali,_Colombia.jpg
 
-8. Champús
-   Archivo: Champus de Cali, Colombia.jpg
-   Autor: Maria Claudia
-   Licencia: CC BY-SA 2.0
-   Fuente: https://commons.wikimedia.org/wiki/File:Champus_de_Cali,_Colombia.jpg
+8. Lulada — Colina de San Antonio, Cali - 02.jpg — Autor: ProtoplasmaKid — CC BY 4.0
+   https://commons.wikimedia.org/wiki/File:Colina_de_San_Antonio,_Cali_-_02.jpg
 
-9. Lulada
-   Archivo: Colina de San Antonio, Cali - 02.jpg
-   Descripción: puesto de luladas y bebidas frías en Cali
-   Autor: ProtoplasmaKid
-   Licencia: CC BY 4.0
-   Fuente: https://commons.wikimedia.org/wiki/File:Colina_de_San_Antonio,_Cali_-_02.jpg
+9. Brevas con manjarblanco — Breva con arequipe 2014-04-17 15-37.jpg — Autor: Ing.anamz — CC BY-SA 3.0
+   https://commons.wikimedia.org/wiki/File:Breva_con_arequipe_2014-04-17_15-37.jpg
 
-10. Brevas con manjarblanco
-    Archivo: Breva con arequipe 2014-04-17 15-37.jpg
-    Autor: Ing.anamz
-    Licencia: CC BY-SA 3.0
-    Fuente: https://commons.wikimedia.org/wiki/File:Breva_con_arequipe_2014-04-17_15-37.jpg
+SITIOS TURÍSTICOS
+10. Museo Rayo — Museo Rayo.jpg — Autor: Finalmetal — CC BY-SA 3.0
+    https://commons.wikimedia.org/wiki/File:Museo_Rayo.jpg
 
-11. Preparaciones del Pacífico
-    Archivo: Comida en Basilia Valle Pacifico 02.jpg
-    Descripción: encocado de camarón, Basilia Valle Pacífico, Cali
-    Autor: ProtoplasmaKid
-    Licencia: CC BY 4.0
-    Fuente: https://commons.wikimedia.org/wiki/File:Comida_en_Basilia_Valle_Pacifico_02.jpg
+11. Farallones de Cali — Farallones de Cali.jpg — Autor: Juan David Corrales Aguilar — CC BY-SA 4.0
+    https://commons.wikimedia.org/wiki/File:Farallones_de_Cali.jpg
 
-SITIOS TURÍSTICOS — CORRECCIONES
-12. Museo Rayo
-    Archivo: Museo Rayo.jpg
-    Autor: Finalmetal
-    Licencia: CC BY-SA 3.0
-    Fuente: https://commons.wikimedia.org/wiki/File:Museo_Rayo.jpg
+12. Bahía Málaga — Bahia Malaga.jpg — Autor: OLMO1976 — CC BY-SA 4.0
+    https://commons.wikimedia.org/wiki/File:Bahia_Malaga.jpg
 
-13. Farallones de Cali
-    Archivo: Farallones de Cali.jpg
-    Autor: Juan David Corrales Aguilar
-    Licencia: CC BY-SA 4.0
-    Fuente: https://commons.wikimedia.org/wiki/File:Farallones_de_Cali.jpg
+OTRAS (sin corregir en esta ronda, siguen desde Wikimedia)
+13. Paisaje del Valle del Cauca (ubicación) — Valle Del Cauca.jpg
+    https://commons.wikimedia.org/wiki/Special:FilePath/Valle%20Del%20Cauca.jpg
+14. Pueblos indígenas (historia) — Mujeres indígenas organizando el tejido ancestral en el km26 - valle del cauca.jpg
+15. Lago Calima — Lago Calima (187380713).jpg
 
-14. Bahía Málaga
-    Archivo: Bahia Malaga.jpg
-    Autor: OLMO1976
-    Licencia: CC BY-SA 4.0
-    Fuente: https://commons.wikimedia.org/wiki/File:Bahia_Malaga.jpg
+============================================================
+2) IMÁGENES LOCALES NUEVAS (carpeta img/, añadidas 14/09/2026)
+============================================================
+Estas fotos vienen de un lote entregado por el estudiante
+("imagenes_valle_pacifico.zip"), descrito por él mismo como
+resultado de búsquedas en internet, SIN licencia ni autor
+verificados todavía. Se incluyeron solo las que no tenían marca
+de agua visible. Antes de usarlas en una publicación pública o
+impresión formal, se recomienda verificar la fuente/licencia de
+cada una o reemplazarlas por equivalentes de Wikimedia Commons.
 
-NOTA
-Las fotos corregidas se cargan desde Wikimedia Commons mediante Special:FilePath para evitar incluir copias innecesarias dentro del ZIP. El sitio necesita Internet para mostrar esas imágenes externas.
+- img/basilica-buga.jpg          (Turismo: Basílica de Buga)
+- img/hacienda-paraiso.jpg       (Turismo: Hacienda El Paraíso)
+- img/petronio-cultura.jpg       (Afrocolombianidad / Bailes: Bunde)
+- img/cantante-folclor.jpg       (Afrocolombianidad: Música — recorte de foto de festival)
+- img/bailarines-tradicionales.jpg (Bailes: Bailes tradicionales — recorte de foto de festival)
+- img/guitarrista-andina.jpg     (Instrumentos: Guitarra — recorte de foto de festival)
+- img/festival-mono-nunez.jpg    (Fiestas: cartel oficial del Festival Mono Núñez)
+- img/vestuario-mujeres.jpg      (Vestuario: Mujeres)
+- img/vestuario-hombres.jpg      (Vestuario: Hombres)
+- img/oso-anteojos.jpg           (Flora y fauna: Oso de anteojos)
+- img/armadillo.jpg              (Flora y fauna: Armadillos)
+- img/chontaduro.jpg             (Flora y fauna: Chontaduro)
+- img/gastronomia-vallecaucana.jpg (Gastronomía: foto de cabecera)
+- img/manjarblanco.jpg           (Gastronomía: Manjarblanco)
+- img/preparaciones-pacifico.jpg (Gastronomía: Preparaciones del Pacífico)
+
+DESCARTADAS del lote nuevo (no se usaron):
+- Foto de Petronio Álvarez (retrato) y de chontaduro con marca de agua "alamy"
+- Foto de caña guadúa con marca de agua "Vecteezy"
+- Foto de brevas con manjar blanco con logo comercial superpuesto ("Manjar del Valle")
+- Ilustración/clipart de fauna colombiana (no es fotografía real)
+- Foto de cabecera "naturaleza_valle" (no se pudo confirmar que corresponda específicamente al Valle del Cauca)
+
+NOTA GENERAL
+naturaleza.jpg (sección Flora y fauna) muestra palmas de cera, un
+paisaje típico del Valle de Cocora (Quindío), no del Valle del
+Cauca. Se deja así por continuidad con versiones anteriores, pero
+conviene reemplazarla si se quiere precisión geográfica total.
