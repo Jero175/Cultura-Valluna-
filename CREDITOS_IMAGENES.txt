@@ -96,6 +96,37 @@ FLORA Y FAUNA — COMPLETADO (14/09/2026)
     Fuente: https://commons.wikimedia.org/wiki/File:Chlorochrysa_nitidissima_Tangara_multicolor_Multicolored_Tanager_(8255153421).jpg
     Uso: tarjeta "Aves y fauna marina" en Flora y fauna (antes compartía foto genérica con "Monos y guatines") y galería general.
 
+CORRECCIÓN DE IMÁGENES CON MARCA DE AGUA — 14/09/2026
+Se detectaron 3 fotos del paquete suministrado que en realidad eran resultados de búsqueda con marca de agua visible de bancos de imágenes de pago (sin licencia, no aptas para publicar). Se reemplazaron por fotos verificadas de Wikimedia Commons:
+
+16. Mono aullador rojo (Alouatta seniculus) — reemplaza la ilustración de stock con marca de agua "dreamstime.com" usada antes en "Monos y guatines" y en el banner de Flora y fauna.
+    Archivo: Alouatta seniculus.jpg
+    Licencia: publicación autorizada por el titular del derecho de autor (permiso registrado en OTRS de Wikimedia)
+    Fuente: https://commons.wikimedia.org/wiki/File:Alouatta_seniculus.jpg
+
+17. Chontaduro (Bactris gasipaes) en Cali — reemplaza la foto con marca de agua "Alamy" usada en la tarjeta "Chontaduro".
+    Archivo: Chontaduro (Bactris gasipaes) at Cali.JPG
+    Licencia: CC BY-SA 3.0
+    Fuente: https://commons.wikimedia.org/wiki/File:Chontaduro_(Bactris_gasipaes)_at_Cali.JPG
+
+18. Petronio Álvarez — reemplaza la foto con marca de agua "Alamy" usada en la galería. Se reutiliza una foto que el propio sitio ya usaba en la sección de Bailes.
+    Archivo: XV Petronio Álvarez.jpg (misma foto ya usada en la tarjeta "Bunde")
+    Fuente: https://commons.wikimedia.org/wiki/Special:FilePath/XV%20Petronio%20%C3%81lvarez.jpg
+
+19. Bandola andina colombiana — reemplaza el póster del Festival Mono Núñez que se repetía también en las tarjetas de Bandola, Tiple y Guitarra sin mostrar ninguno de los instrumentos.
+    Archivo: Bandola andina columbiana.jpg
+    Licencia: CC BY 3.0
+    Fuente: https://commons.wikimedia.org/wiki/File:Bandola_andina_columbiana.jpg
+
+20. Tiple colombiano
+    Archivo: Tiple.jpg
+    Licencia: CC BY-SA 3.0
+    Fuente: https://commons.wikimedia.org/wiki/File:Tiple.jpg
+
+Nota sobre "Guitarra": se usó la foto local img/guitarrista-andina.jpg (ya incluida en el paquete original, sin marca de agua ni indicios de ser una foto de stock) en vez de buscar otra externa.
+
+El póster oficial del Festival Mono Núñez (img/valle-pacifico/10_festival_mono_nunez.jpg) se conserva únicamente donde el propio festival es el tema (tarjeta "Música andina" en Turismo, línea de tiempo y galería), ya que allí ilustra directamente aquello que nombra. Se retiró de las tarjetas de Bandola, Tiple y Guitarra porque no corresponde a ninguno de esos instrumentos.
+
 NOTA
 Las fotos corregidas se cargan desde Wikimedia Commons mediante Special:FilePath para evitar incluir copias innecesarias dentro del ZIP. El sitio necesita Internet para mostrar esas imágenes externas.
 

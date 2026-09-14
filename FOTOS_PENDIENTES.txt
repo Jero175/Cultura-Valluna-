@@ -18,6 +18,18 @@ Se resolvió el pendiente de Flora y fauna: la tarjeta "Aves y fauna marina" aho
 NOTA SOBRE EL PDF DE REFERENCIA SUMINISTRADO (imagenes_cultura_valle_colombia.pdf)
 Ese PDF trae imágenes de apoyo para: población de origen europeo, comunidades afrocolombianas, comunidades campesinas, cultura valluna, bandola, tiple, guitarra, monos/guatines y aves/fauna marina. El propio documento aclara que son "resultado de búsqueda de imágenes" y pide "verificar licencia antes de reutilizar". Al revisarlas, las fotos de bandola y tiple son tomas de catálogo/tienda (fondo blanco, sin autor ni licencia) y la foto de aves/tortuga marina tiene marca de agua de un sitio externo (deseoaprender.com): ninguna trae una licencia verificable, así que no se publicaron directamente en la página, siguiendo el mismo criterio que ya se usó en las correcciones de gastronomía y turismo (solo Wikimedia Commons con licencia y autor verificados). Solo se usó del PDF la información que permitió identificar qué foto faltaba y de qué tema (la tángara para "Aves y fauna marina").
 
+ACTUALIZACIÓN — 14/09/2026 (4): AUDITORÍA COMPLETA DE MARCAS DE AGUA
+El usuario compartió capturas de pantalla mostrando que Bandola, Tiple y Guitarra seguían compartiendo la misma foto del póster del Festival Mono Núñez. Al revisar ESE hallazgo se hizo una revisión de las 60 imágenes locales del proyecto (visual + OCR) y se encontraron 3 fotos con marca de agua visible de bancos de imágenes de pago, coladas dentro del paquete "supuestamente propio" de img/valle-pacifico/:
+- 01_fauna_colombia.jpg → en realidad una ilustración de stock de Dreamstime (marca de agua "dreamstime.com", ID 113628171), usada en el banner de Flora y fauna y en "Monos y guatines".
+- 02_petronio_alvarez.jpg → foto con marca de agua "Alamy", usada en la galería.
+- 06_chontaduro.jpg → foto con marca de agua "Alamy", usada en la tarjeta "Chontaduro".
+
+Las tres se reemplazaron por fotos verificadas de Wikimedia Commons (ver CREDITOS_IMAGENES.txt, entradas 16-20). Los archivos originales se dejaron en la carpeta (marcados como "dados de baja" en img/valle-pacifico/README.txt) pero ya no están enlazados en index.html.
+
+También se resolvió lo de Bandola/Tiple/Guitarra: cada una ahora tiene su propia foto (Bandola y Tiple desde Wikimedia Commons con licencia CC; Guitarra usa la foto local img/guitarrista-andina.jpg, que no tenía marca de agua y no se estaba usando en ninguna parte). El póster del Festival Mono Núñez se dejó solo donde tiene sentido: la tarjeta "Música andina", la línea de tiempo y la galería, porque ahí sí ilustra al festival mismo.
+
+Las demás 57 imágenes locales revisadas (gastronomía, vestuario, personajes, paisajes, instrumentos del Pacífico) no mostraron marcas de agua ni indicios de ser fotos de stock.
+
 Quedan como siguiente mejora opcional:
-- Bandola, Tiple y Guitarra comparten hoy la misma foto (img/valle-pacifico/10_festival_mono_nunez.jpg); se les podría buscar una foto propia por instrumento con licencia verificada.
 - Otras secciones que todavía pueden recibir más fotografías locales, especialmente vestuario y herencia afrocolombiana.
+- Confirmar con los estudiantes el origen exacto de las fotos de comida y paisajes del paquete "valle-pacifico" que no traían nota de fuente, por buena práctica (ninguna mostró marca de agua, pero no está de más confirmar).
