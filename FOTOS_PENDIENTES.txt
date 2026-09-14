@@ -12,7 +12,12 @@ Se enlazaron en el HTML las fotos de Museo Rayo y Bahía Málaga que ya estaban 
 ACTUALIZACIÓN — 14/09/2026 (2)
 Se agregaron fotos propias de Cununo, Bombo y Guasá (img/cununo.jpg, img/bombo.jpg, img/guasa.jpg), recortadas de una lámina de referencia suministrada por los estudiantes. Ya no comparten la foto de la marimba y también se añadieron a la galería.
 
-PENDIENTE REAL (sin foto propia todavía):
-- Flora y fauna: "Monos y guatines" y "Aves y fauna marina" usan la misma foto genérica (img/valle-pacifico/01_fauna_colombia.jpg). Falta una segunda foto distinta para una de las dos tarjetas.
+ACTUALIZACIÓN — 14/09/2026 (3)
+Se resolvió el pendiente de Flora y fauna: la tarjeta "Aves y fauna marina" ahora usa una foto propia y distinta (tángara multicolor, ave endémica de Colombia, CC BY-SA 2.0 vía Wikimedia Commons — ver CREDITOS_IMAGENES.txt). "Monos y guatines" conserva la foto genérica de fauna, que ya le corresponde temáticamente.
 
-Quedan como siguiente mejora opcional otras secciones que todavía pueden recibir más fotografías locales, especialmente vestuario y herencia afrocolombiana.
+NOTA SOBRE EL PDF DE REFERENCIA SUMINISTRADO (imagenes_cultura_valle_colombia.pdf)
+Ese PDF trae imágenes de apoyo para: población de origen europeo, comunidades afrocolombianas, comunidades campesinas, cultura valluna, bandola, tiple, guitarra, monos/guatines y aves/fauna marina. El propio documento aclara que son "resultado de búsqueda de imágenes" y pide "verificar licencia antes de reutilizar". Al revisarlas, las fotos de bandola y tiple son tomas de catálogo/tienda (fondo blanco, sin autor ni licencia) y la foto de aves/tortuga marina tiene marca de agua de un sitio externo (deseoaprender.com): ninguna trae una licencia verificable, así que no se publicaron directamente en la página, siguiendo el mismo criterio que ya se usó en las correcciones de gastronomía y turismo (solo Wikimedia Commons con licencia y autor verificados). Solo se usó del PDF la información que permitió identificar qué foto faltaba y de qué tema (la tángara para "Aves y fauna marina").
+
+Quedan como siguiente mejora opcional:
+- Bandola, Tiple y Guitarra comparten hoy la misma foto (img/valle-pacifico/10_festival_mono_nunez.jpg); se les podría buscar una foto propia por instrumento con licencia verificada.
+- Otras secciones que todavía pueden recibir más fotografías locales, especialmente vestuario y herencia afrocolombiana.

@@ -89,6 +89,13 @@ SITIOS TURÍSTICOS — CORRECCIONES
     Licencia: CC BY-SA 4.0
     Fuente: https://commons.wikimedia.org/wiki/File:Bahia_Malaga.jpg
 
+FLORA Y FAUNA — COMPLETADO (14/09/2026)
+15. Tángara multicolor (ave endémica de Colombia, presente en el Valle del Cauca)
+    Archivo: Chlorochrysa nitidissima Tangara multicolor Multicolored Tanager (8255153421).jpg
+    Licencia: CC BY-SA 2.0
+    Fuente: https://commons.wikimedia.org/wiki/File:Chlorochrysa_nitidissima_Tangara_multicolor_Multicolored_Tanager_(8255153421).jpg
+    Uso: tarjeta "Aves y fauna marina" en Flora y fauna (antes compartía foto genérica con "Monos y guatines") y galería general.
+
 NOTA
 Las fotos corregidas se cargan desde Wikimedia Commons mediante Special:FilePath para evitar incluir copias innecesarias dentro del ZIP. El sitio necesita Internet para mostrar esas imágenes externas.
 
